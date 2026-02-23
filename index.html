@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refonte Gozem</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body class="bg-white dark:bg-gray-800">
+
+    <header x-data="{ mobileMenuOpen: false }"
+        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 font-['Poppins'] transition-all duration-300">
+
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+
+            <div class="flex-shrink-0">
+                <a href="/" class="text-xl md:text-2xl font-black text-[#00A651] dark:text-white tracking-tighter">
+                    GOZEM
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-7">
+                <a href="partner.html"
+                    class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Devenir
+                    Partenaire</a>
+                <a href="#services"
+                    class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Nos
+                    Services</a>
+
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-[14px] font-normal text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition py-8">
+                        Nous Rejoindre ?
+                        <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute left-0 w-64 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[70] p-2">
+                        <a href="carriere.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Carrières</a>
+                        <a href="offres.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-bold text-[#00A651]">Offres
+                            d'emplois</a>
+                        <a href="metiers.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Métiers
+                            & Départements</a>
+                        <hr class="my-1 border-gray-100 dark:border-slate-800">
+                        <a href="programmes.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition italic">Programmes
+                            Spécialisés</a>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Centre
+                    d'aide</a>
+            </nav>
+
+            <div class="flex items-center gap-2 sm:gap-4">
+
+                <div class="relative group hidden md:block">
+                    <button
+                        class="flex items-center gap-1.5 text-[14px] font-medium text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition-colors py-4">
+                        <span>FR</span>
+                        <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 opacity-60"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute right-0 w-32 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-1 z-[70] p-1.5 overflow-hidden">
+                        <a href="#"
+                            class="flex items-center justify-between px-3 py-2 text-[13px] font-semibold text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg">English
+                            <span class="text-[10px] opacity-40">EN</span></a>
+                    </div>
+                </div>
+
+                <button id="theme-toggle"
+                    class="hidden md:flex p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-all">
+                    <img src="icones/night-mode.png" id="theme-toggle-dark-icon" class="hidden w-5 h-5 object-contain"
+                        alt="Dark">
+                    <img src="icones/day-mode.png" id="theme-toggle-light-icon" class="w-5 h-5 object-contain"
+                        alt="Light">
+                </button>
+
+                <div class="relative group hidden md:block">
+                    <button
+                        class="flex items-center space-x-1.5 bg-gray-50 dark:bg-slate-900 px-3 py-2 rounded-xl border border-transparent hover:border-[#00A651] transition-all">
+                        <img src="icones/world-flag.png" alt="Bénin" class="w-5 h-auto rounded-sm">
+                        <span class="text-[11px] font-bold dark:text-white">Bénin</span>
+                        <svg class="w-2.5 h-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[60] overflow-hidden p-1">
+                        <a href="#"
+                            class="flex items-center space-x-3 px-4 py-3 text-xs font-medium hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">
+                            <img src="icones/world-flag (1).png" class="w-4 h-auto"> <span>Togo</span>
+                        </a>
+
+                        <a href="#"
+                            class="flex items-center space-x-3 px-4 py-3 text-xs font-medium hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">
+
+                            <img src="icones/cameroon.png" class="w-4 h-auto"> <span>Cameroun</span>
+
+                        </a>
+                    </div>
+                </div>
+
+                <button @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="lg:hidden p-2.5 text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
+                    <svg x-show="!mobileMenuOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                    <svg x-show="mobileMenuOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-10" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-10"
+            class="lg:hidden fixed inset-x-0 top-20 bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800 shadow-2xl z-40 max-h-[calc(100vh-80px)] overflow-y-auto px-6 py-8">
+
+            <div class="flex flex-col space-y-6">
+                <a href="partner.html" class="text-xl font-black text-gray-900 dark:text-white">Devenir Partenaire</a>
+                <a href="#services" class="text-xl font-black text-gray-900 dark:text-white">Nos Services</a>
+
+                <div class="space-y-4 pt-4 border-t border-gray-100 dark:border-slate-800">
+                    <p class="text-[10px] font-black text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <a href="carriere.html" class="text-gray-600 dark:text-slate-400 font-medium">Carrières</a>
+                        <a href="offres.html" class="text-[#00A651] font-bold">Offres d'emplois</a>
+                        <a href="metiers.html" class="text-gray-600 dark:text-slate-400 font-medium">Métiers &
+                            Départements</a>
+                        <a href="programmes.html" class="text-gray-500 dark:text-slate-500 italic text-sm">Programmes
+                            Spécialisés</a>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-slate-800 flex flex-wrap gap-4">
+                    <a href="#" class="text-sm font-bold text-gray-600 dark:text-slate-400">Français (FR)</a>
+                    <a href="#" class="text-sm font-bold text-gray-600 dark:text-slate-400">Bénin</a>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-slate-800">
+                    <a href="#"
+                        class="flex items-center justify-between text-lg font-bold text-gray-800 dark:text-white">
+                        Centre d'aide
+                        <svg class="w-5 h-5 opacity-40" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8c0 1.105-.423 1.912-1.008 2.47-.502.48-.992.67-1.142.812-.132.124-.15.22-.15.318a1 1 0 11-2 0c0-1.018.533-1.802 1.14-2.383.568-.544.86-1.02.86-1.427a1 1 0 00-1-1zM11 14a1 1 0 11-2 0 1 1 0 012 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+    </header>
+
+    <section
+        class="relative w-full min-h-[67px] flex items-center bg-white dark:bg-slate-950 font-['Poppins'] py-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+            <div class="z-10 text-center lg:text-left">
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white leading-tight mb-6">
+                    <span class="text-[#00A651]">GOZEM</span> <br class="hidden md:block"> Simplifie votre quotidien
+                </h1>
+
+                <p class="text-lg text-slate-500 dark:text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Gozem est la solution simple et sécurisée pour commander un trajet,
+                    se faire livrer des repas et gérer vos paiements partout en Afrique.
+                </p>
+
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="#"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-full font-bold transition-all shadow-lg shadow-blue-500/25 active:scale-95 text-sm">
+                        Créer un compte passager
+                    </a>
+                    <a href="#"
+                        class="bg-[#00A651] hover:bg-[#008d44] text-white px-8 py-3.5 rounded-full font-bold transition-all shadow-lg shadow-green-500/25 active:scale-95 text-sm">
+                        Devenir conducteur
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center items-center">
+                <div class="absolute w-[140%] h-[140%] bg-slate-50 dark:bg-slate-900/50 rounded-full -z-10"></div>
+
+                <div class="relative">
+                    <div
+                        class="w-[320px] md:w-[450px] lg:w-[500px] relative z-20 drop-shadow-[0_35px_60px_rgba(0,0,0,0.15)] transform rotate-[-5deg] transition-transform duration-700 hover:rotate-0">
+                        <img src="images/phone.png" alt="Gozem App" class="w-full h-auto object-contain">
+                    </div>
+
+                    <div
+                        class="absolute -right-8 md:-right-12 top-1/4 z-30 bg-white dark:bg-slate-800 p-4 md:p-5 rounded-[2rem] shadow-2xl border border-gray-50 dark:border-slate-700 animate-bounce-slow">
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-[#00A651]">
+                                <i class="fa fa-check-circle text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-[13px] font-black text-slate-700 dark:text-white leading-none">Course
+                                    terminée</p>
+                                <p class="text-[10px] text-gray-400 mt-1">Paiement validé</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute -left-12 md:-left-20 bottom-1/4 z-30 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-gray-50 dark:border-slate-700">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                                <i class="fa fa-map-marker text-lg"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[11px] font-bold dark:text-white uppercase tracking-wider">Arrivée dans
+                                </p>
+                                <p class="text-[16px] font-black text-[#00A651]">3 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fixed bottom-6 right-6 z-[100] flex items-end gap-3 group">
+            <div
+                class="bg-white dark:bg-slate-800 px-4 py-2 rounded-xl shadow-lg border border-gray-100 dark:border-slate-700 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                Besoin d'aide ?
+            </div>
+            <button
+                class="w-14 h-14 bg-blue-600 rounded-full shadow-2xl flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform">
+                <i class="fa fa-comments"></i>
+            </button>
+        </div>
+    </section>
+
+    <style>
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 4s infinite ease-in-out;
+        }
+    </style>
+
+    <section class="py-8 bg-white dark:bg-slate-950 mt-8" id="services">
+        <div class="max-w-4xl mx-auto text-center mb-8">
+            <span class="inline-block text-gray-700 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] mb-4">
+                Nos Services
+            </span>
+            <h2 class="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-[1.1] tracking-tighter">
+                Tout ce dont vous avez besoin, <br>
+                <span class="text-[#00A651]">dans une seule App.</span>
+            </h2>
+        </div>
+    </section>
+
+    <section class="pb-20 bg-white dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex justify-center mb-12">
+                <div
+                    class="inline-flex p-1.5 bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-full shadow-sm">
+                    <button onclick="switchTab('clients')" id="btn-clients"
+                        class="tab-btn px-8 py-2.5 text-sm font-bold rounded-full transition-all duration-300 bg-[#00A651] text-white shadow-md">
+                        Clients
+                    </button>
+                    <button onclick="switchTab('champions')" id="btn-champions"
+                        class="tab-btn px-8 py-2.5 text-sm font-bold rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white">
+                        Champions
+                    </button>
+                    <button onclick="switchTab('marchands')" id="btn-marchands"
+                        class="tab-btn px-8 py-2.5 text-sm font-bold rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white">
+                        Marchands
+                    </button>
+                    <button onclick="switchTab('entreprises')" id="btn-entreprises"
+                        class="tab-btn px-8 py-2.5 text-sm font-bold rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white">
+                        Entreprises
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-[40px] p-8 md:p-12 shadow-sm min-h-[400px]">
+
+                <div id="content-clients" class="tab-content animate-fade-in font-['Poppins']">
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                            <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Mobilité
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/scooter.png" class="w-10 h-10 object-contain" alt="Zem">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Zem</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Une
+                                        solution rapide et économique pour se déplacer partout, même aux heures de
+                                        pointe.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/tricycle (1).png" class="w-10 h-10 object-contain" alt="Tricycle">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Tricycle</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Un
+                                        transport couvert, abordable et pratique pour rester à l'abri du soleil tout en
+                                        respectant votre budget.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/taxi.png" class="w-10 h-10 object-contain" alt="Taxi">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Taxi</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Le confort
+                                        et la tranquillité d'un voyage en voiture avec chauffeur pour de longues
+                                        distances.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100 dark:border-slate-800 my-12">
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                            <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Livraisons
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/fast-food.png" class="w-10 h-10 object-contain" alt="Restauration">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Restauration</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Commandez
+                                        et faites-vous livrer toutes vos envies à votre porte.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/online-shopping.png" class="w-10 h-10 object-contain" alt="Achats">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Achats</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Trouvez
+                                        tout ce dont vous avez besoin : produits d'épicerie et plus encore.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/delivery-bike (1).png" class="w-10 h-10 object-contain"
+                                        alt="Coursier">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Coursier</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Faites
+                                        envoyer vos colis directement à vos destinataires.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                            <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Achats digitaux
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/ticket.png" class="w-10 h-10 object-contain" alt="Gaz">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Billeterie</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Commandez
+                                        votre bouteille de gaz domestique et faites-la livrer à votre porte.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src="icones/payment.png" class="w-10 h-10 object-contain" alt="Crédit">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Crédit</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Rechargez
+                                        votre crédit de communication auprès de votre opérateur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-champions" class="tab-content hidden animate-fade-in font-['Poppins']">
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                            <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Gagne ta vie
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/customer-relationship-management.png"
+                                        class="w-10 h-10 object-contain" alt="Mise en relation">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Mise en relation clients
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Obtiens
+                                        plus de courses et de clients chaque jour grâce à l’appli Gozem.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/success.png" class="w-10 h-10 object-contain" alt="Gestion">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Gestion de ton activité
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Suis tes
+                                        courses, tes revenus et gère ton activité directement depuis l’application.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/training.png" class="w-10 h-10 object-contain" alt="Coaching">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Coaching personnalisé
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Profite
+                                        des conseils et accompagnement de ton coach pour maximiser tes gains.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/growth.png" class="w-10 h-10 object-contain" alt="Évolution">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Évolution de carrière
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Deviens
+                                        propriétaire de ta voiture et accède au statut de Champion Gold pour multiplier
+                                        tes revenus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100 dark:border-slate-800 my-12">
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                            <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Services financiers
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/profitability.png" class="w-10 h-10 object-contain" alt="Finance">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Financement du véhicule
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Finance ta
+                                        voiture sans apport initial, avec prélèvements automatiques sur tes gains.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/mobile-banking.png" class="w-10 h-10 object-contain" alt="Phone">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Financement du téléphone
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Accède au
+                                        financement d’un smartphone pour travailler efficacement avec l’appli Gozem.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/cash.png" class="w-10 h-10 object-contain" alt="Cash">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Avance d’argent</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Obtiens
+                                        une avance en cas de panne, d’accident ou de besoin ponctuel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100 dark:border-slate-800 my-12">
+
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                            <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Sécurité & protection
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/tracking.png" class="w-10 h-10 object-contain" alt="Tracking">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Tracking véhicule</h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Protège ta
+                                        voiture grâce au tracking intégré contre le vol.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 group">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
+                                    <img src="icones/consumer-protection.png" class="w-10 h-10 object-contain"
+                                        alt="Accident">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Prise en charge accident
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Bénéficie
+                                        d’une prise en charge rapide en cas d’accident ou d’aléas du métier.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-marchands" class="tab-content hidden animate-fade-in font-['Poppins']">
+
+                    <div class="mb-12">
+                        <h3
+                            class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center text-center justify-center">
+                            Développez votre entreprise
+                        </h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex flex-col items-center text-center group">
+                                <div
+                                    class="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6 transition-all group-hover:bg-[#00A651] shadow-sm">
+                                    <img src="icones/shopping-cart.png"
+                                        class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert"
+                                        alt="Livraison physique">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3 px-4">Vente en ligne
+                                    avec Livraison (Produits physiques)</h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                                    Vendez vos produits et bénéficiez de la logistique Gozem pour livrer vos clients en
+                                    toute transparence.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col items-center text-center group">
+                                <div
+                                    class="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6 transition-all group-hover:bg-[#00A651] shadow-sm">
+                                    <img src="icones/qr-code.png"
+                                        class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert"
+                                        alt="QR Code">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3 px-4">Vente en ligne
+                                    avec accès par QR Code (sans livraison)</h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                                    Proposez la vente de tickets, pass ou accès via l’application Gozem. Après l’achat,
+                                    le client reçoit un QR Code à scanner sur place pour valider.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col items-center text-center group">
+                                <div
+                                    class="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6 transition-all group-hover:bg-[#00A651] shadow-sm">
+                                    <img src="icones/public-relation.png"
+                                        class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert"
+                                        alt="Publicité">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3 px-4">Publicité intégrée
+                                </h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                                    Augmentez votre visibilité grâce à nos solutions de publicité intégrées sur la
+                                    plateforme.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 text-center">
+                        <a href="#"
+                            class="inline-flex items-center justify-center px-10 py-4 bg-[#00A651] text-white font-bold rounded-full hover:bg-[#008d44] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Devenir Marchand Gozem
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content-entreprises" class="tab-content hidden animate-fade-in font-['Poppins']">
+
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 text-center">
+                            Offres pour les entreprises
+                        </h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            <div class="flex flex-col items-start group">
+                                <div
+                                    class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
+                                    <img src="icones/car.png" class="w-10 h-10 object-contain"
+                                        alt="Mobilité Entreprise">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Mobilité
+                                </h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                    Facilitez les trajets de vos collaborateurs, partenaires ou clients.
+                                </p>
+                                <div
+                                    class="bg-gray-50 dark:bg-slate-800/50 p-4 rounded-2xl border-l-4 border-[#00A651]">
+                                    <p class="text-xs italic text-gray-600 dark:text-slate-300">
+                                        « Grâce à Gozem, nous optimisons la mobilité de nos équipes au
+                                        quotidien. »
+                                    </p>
+                                    <p class="text-[10px] font-bold mt-2 text-[#00A651]">TotalEnergies</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-start group">
+                                <div
+                                    class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
+                                    <img src="icones/logistics.png" class="w-10 h-10 object-contain" alt="Logistique">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Logistique
+                                    et Livraison</h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+                                    Gérez efficacement la livraison de vos marchandises.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col items-start group">
+                                <div
+                                    class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
+                                    <img src="icones/traffic-jam.png" class="w-10 h-10 object-contain" alt="Flotte">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Gestion de
+                                    Flotte</h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+                                    Confiez-nous la gestion de vos véhicules pour un suivi et un entretien
+                                    optimal.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+                            <div class="flex flex-col items-start group">
+                                <div
+                                    class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
+                                    <img src="icones/public-relation.png" class="w-10 h-10 object-contain"
+                                        alt="Publicité B2B">
+                                </div>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Publicité
+                                </h4>
+                                <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
+                                    Connectez votre entreprise à des clients potentiels grâce à des
+                                    solutions publicitaires personnalisées.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-16 font-['Poppins']">
+        <div
+            class="relative w-full bg-[#00A651] rounded-[40px] overflow-hidden p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between">
+
+            <div class="z-10 w-full lg:w-[65%] text-white">
+                <p class="text-sm md:text-base font-normal mb-4 opacity-90 tracking-wide">Téléchargez notre application
+                    mobile</p>
+
+                <h2 class="text-2xl md:text-3xl lg:text-3xl font-semibold leading-[1.1] mb-10 max-w-5xl">
+                    Commencez par voyager et commander facilement et plus rapidement
+                </h2>
+
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-8">
+                    <div class="flex flex-col gap-3 shrink-0">
+                        <a href="#" class="transition hover:scale-105 active:scale-95">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="App Store" class="h-11 md:h-12">
+                        </a>
+                        <a href="#" class="transition hover:scale-105 active:scale-95">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Google Play" class="h-11 md:h-12">
+                        </a>
+                    </div>
+
+                    <div class="hidden md:block h-16 w-[1px] bg-white/20"></div>
+
+                    <div
+                        class="bg-black/15 backdrop-blur-xl border border-white/10 p-4 rounded-3xl flex items-center gap-5">
+                        <div class="bg-white p-2 rounded-2xl shadow-inner">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Gozem" alt="QR Code"
+                                class="w-16 h-16">
+                        </div>
+                        <div class="max-w-[180px]">
+                            <p class="text-[13px] font-bold leading-snug mb-1">Scanner pour télécharger l'application
+                            </p>
+                            <p class="text-[11px] opacity-70">iOS & Android</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mt-20 lg:mt-0 w-full lg:w-[45%] flex justify-center lg:justify-end items-end">
+                <div class="relative flex items-end -space-x-12 md:-space-x-16 lg:-space-x-20">
+
+                    <div
+                        class="w-[180px] md:w-[280px] lg:w-[320px] transform translate-y-12 lg:translate-y-20 opacity-70 transition-transform duration-500 hover:translate-y-10">
+                        <img src="images/phone.png" alt="App Gozem Interface" class="w-full h-auto">
+                    </div>
+
+                    <div class="w-[220px] md:w-[320px] lg:w-[380px] relative z-20">
+                        <img src="images/hero_img.png" alt="App Gozem Interface Main"
+                            class="w-full h-auto drop-shadow-[-30px_20px_50px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:scale-105">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+                <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="200" r="200" fill="white" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-slate-950 font-['Poppins']">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-12">
+                Nous sommes disponibles dans tout ces pays
+            </h2>
+
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+
+                <div
+                    class="flex items-center gap-3 bg-red-50 dark:bg-red-900/10 px-6 py-3 rounded-full border border-red-100 dark:border-red-900/20 transition-transform hover:scale-105">
+                    <img src="https://flagcdn.com/w40/bj.png" alt="Bénin"
+                        class="w-6 h-4 object-cover rounded-sm shadow-sm">
+                    <span class="font-bold text-slate-700 dark:text-slate-200">Bénin</span>
+                </div>
+
+                <div
+                    class="flex items-center gap-3 bg-yellow-50 dark:bg-yellow-900/10 px-6 py-3 rounded-full border border-yellow-100 dark:border-yellow-900/20 transition-transform hover:scale-105">
+                    <img src="https://flagcdn.com/w40/tg.png" alt="Togo"
+                        class="w-6 h-4 object-cover rounded-sm shadow-sm">
+                    <span class="font-bold text-slate-700 dark:text-slate-200">Togo</span>
+                </div>
+
+                <div
+                    class="flex items-center gap-3 bg-green-50 dark:bg-green-900/10 px-6 py-3 rounded-full border border-green-100 dark:border-green-900/20 transition-transform hover:scale-105">
+                    <img src="https://flagcdn.com/w40/cm.png" alt="Cameroun"
+                        class="w-6 h-4 object-cover rounded-sm shadow-sm">
+                    <span class="font-bold text-slate-700 dark:text-slate-200">Cameroun</span>
+                </div>
+
+                <div
+                    class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/10 px-6 py-3 rounded-full border border-blue-100 dark:border-blue-900/20 transition-transform hover:scale-105">
+                    <img src="https://flagcdn.com/w40/ga.png" alt="Gabon"
+                        class="w-6 h-4 object-cover rounded-sm shadow-sm">
+                    <span class="font-bold text-slate-700 dark:text-slate-200">Gabon</span>
+                </div>
+
+                <div
+                    class="flex items-center gap-3 bg-emerald-50 dark:bg-emerald-900/10 px-6 py-3 rounded-full border border-emerald-100 dark:border-emerald-900/20 transition-transform hover:scale-105">
+                    <img src="https://flagcdn.com/w40/sn.png" alt="Sénégal"
+                        class="w-6 h-4 object-cover rounded-sm shadow-sm">
+                    <span class="font-bold text-slate-700 dark:text-slate-200">Sénégal</span>
+                </div>
+
+                <div
+                    class="flex items-center gap-3 bg-orange-50 dark:bg-orange-900/10 px-6 py-3 rounded-full border border-orange-100 dark:border-orange-900/20 transition-transform hover:scale-105">
+                    <img src="https://flagcdn.com/w40/ci.png" alt="Côte d'Ivoire"
+                        class="w-6 h-4 object-cover rounded-sm shadow-sm">
+                    <span class="font-bold text-slate-700 dark:text-slate-200">Côte d'Ivoire</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+
+            <div class="relative flex justify-center lg:justify-start">
+                <div class="absolute inset-0 bg-green-100/50 dark:bg-green-900/10 blur-3xl rounded-full scale-75"></div>
+
+                <div class="relative z-10 w-full max-w-md">
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl ">
+                        <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/10/IMG_20251113_132017783_HDR_PORTRAIT-scaled-1-768x1024.jpg"
+                            alt="Raïssa - Support Gozem" class="w-full h-[400px] object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-[#00A651] p-6 text-white">
+                            <p class="font-bold text-sm">Aminata A.</p>
+                            <p class="text-xs opacity-90">Toujours disponible pour vous aider !</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute -right-6 top-12 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-700 flex items-center gap-3 animate-bounce-slow">
+                        <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/10/story1.jpg"
+                            class="w-10 h-10 rounded-full object-cover border-2 border-green-500">
+                        <div class="pr-4">
+                            <p class="text-[10px] font-bold text-gray-400">Marcel D'oliveirra</p>
+                            <p class="text-[11px] font-medium dark:text-white">Disponible pour répondre à vos questions
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute -right-12 bottom-20 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-700 flex items-center gap-3 animate-bounce-slow-delay">
+                        <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/10/story3.jpg"
+                            class="w-10 h-10 rounded-full object-cover border-2 border-green-500">
+                        <div class="pr-4">
+                            <p class="text-[10px] font-bold text-gray-400">Murie Loko</p>
+                            <p class="text-[11px] font-medium dark:text-white">Besoin d'aide ? Je suis là pour vous !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center lg:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white leading-tight mb-6">
+                    Notre équipe de service clientèle est <span class="text-[#00A651]">disponible 24/7</span>
+                </h2>
+
+                <p class="text-base text-slate-600 dark:text-slate-400 mb-6 normal-case leading-relaxed">
+                    Pour répondre à toutes vos questions et vous aider à chaque étape de votre expérience Gozem.
+                </p>
+
+                <p class="text-base text-slate-500 dark:text-slate-400 mb-10 normal-case leading-relaxed">
+                    Faites partie dès maintenant de nos clients satisfaits et profitez de l'assistance personnalisée
+                    dont vous avez besoin.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center gap-3 bg-[#004d40] hover:bg-[#003d33] text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl active:scale-95 group">
+                    Contactez-nous
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 4s infinite ease-in-out;
+        }
+
+        .animate-bounce-slow-delay {
+            animation: bounce-slow 5s infinite ease-in-out 1s;
+        }
+    </style>
+
+    <section class="max-w-7xl mx-auto px-6 py-20 font-['Poppins']">
+        <div
+            class="relative w-full bg-gradient-to-br from-[#001A3D] via-[#008d44] to-[#001A3D] rounded-[45px] overflow-hidden p-10 md:p-20 shadow-2xl">
+
+            <div class="absolute inset-0 opacity-15 pointer-events-none">
+                <svg class="w-full h-full" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="150" cy="100" r="2" fill="white" />
+                    <circle cx="400" cy="50" r="2" fill="white" />
+                    <circle cx="650" cy="150" r="2" fill="white" />
+                    <circle cx="200" cy="300" r="2" fill="white" />
+                    <circle cx="550" cy="350" r="2" fill="white" />
+                    <line x1="150" y1="100" x2="400" y2="50" stroke="white" stroke-width="0.5" />
+                    <line x1="400" y1="50" x2="650" y2="150" stroke="white" stroke-width="0.5" />
+                    <line x1="150" y1="100" x2="200" y2="300" stroke="white" stroke-width="0.5" />
+                    <line x1="400" y1="50" x2="550" y2="350" stroke="white" stroke-width="0.5" />
+                </svg>
+            </div>
+
+            <div class="relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">Gozem en quelques chiffres
+                    </h2>
+                    <div class="w-20 h-1.5 bg-white/30 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white mb-16">
+                    <div class="flex flex-col items-center group">
+                        <span
+                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">5</span>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Pays opérationnels
+                        </p>
+                        <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[200px]">Togo, Bénin, Gabon,
+                            Cameroun et Rép. du Congo.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group md:border-x md:border-white/10 px-4">
+                        <span
+                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">300+</span>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Collaborateurs</p>
+                        <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[200px]">Une équipe présente
+                            dans 12 villes d'Afrique francophone.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group">
+                        <span
+                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">20+</span>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Offres / mois</p>
+                        <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[200px]">Nous recrutons
+                            régulièrement pour notre croissance.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center text-white lg:max-w-3xl lg:mx-auto pt-12 border-t border-white/10">
+                    <div class="flex flex-col items-center group">
+                        <span
+                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">4</span>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Verticales actives
+                        </p>
+                        <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[250px]">Transport,
+                            E-commerce, E-banking, Financement.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group">
+                        <span
+                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">15</span>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Nationalités</p>
+                        <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[250px]">Nous valorisons la
+                            diversité et les talents du continent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-slate-950 font-['Poppins']">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-20">
+                <p class="text-[#00A651] font-bold text-sm uppercase tracking-widest mb-3">Gozem</p>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-800 dark:text-white">
+                    Votre plateforme de service la plus Fiable !
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+
+                <div class="space-y-16">
+                    <div
+                        class="flex flex-col md:flex-row lg:flex-row items-center lg:items-end gap-6 text-center lg:text-right">
+                        <div class="order-2 lg:order-1">
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Sécurité</h3>
+                            <p
+                                class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs mx-auto lg:ml-auto">
+                                Nous assurons la sécurité de vos trajets et transactions afin qu'elles aboutissent en
+                                toute sérénité.
+                            </p>
+                        </div>
+                        <div
+                            class="order-1 lg:order-2 shrink-0 w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-200">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col md:flex-row lg:flex-row items-center lg:items-end gap-6 text-center lg:text-right">
+                        <div class="order-2 lg:order-1">
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Rapidité</h3>
+                            <p
+                                class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs mx-auto lg:ml-auto">
+                                Grâce à notre large réseau de chauffeurs, nous nous efforçons de vous servir en un temps
+                                record !
+                            </p>
+                        </div>
+                        <div
+                            class="order-1 lg:order-2 shrink-0 w-14 h-14 bg-red-500 rounded-full flex items-center justify-center shadow-lg shadow-red-200">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center py-10 scale-110 md:scale-125">
+                    <div class="absolute inset-0  rounded-full scale-125 blur-3xl"></div>
+                    <img src="images/phone.png" alt="Fiabilité Gozem"
+                        class="relative z-10 w-full h-auto max-w-[350px] md:max-w-[400px] animate-float">
+                </div>
+
+                <div class="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left">
+                    <div
+                        class="shrink-0 w-14 h-14 bg-[#00A651] rounded-full flex items-center justify-center shadow-lg shadow-green-200">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Innovation</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs mx-auto lg:mx-0">
+                            Nous innovons constamment pour vous offrir des solutions de paiement et de transport
+                            adaptées à vos besoins locaux.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+
+    <section class="py-24 bg-white dark:bg-slate-950 font-['Poppins']">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tighter">
+                        Actualités récentes <span class="text-[#00A651]">.</span>
+                    </h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm md:text-base">
+                        Suivez l'évolution de la Super App africaine.
+                    </p>
+                </div>
+                <a href="#"
+                    class="text-sm font-bold text-slate-900 dark:text-white border-b-2 border-[#00A651] pb-1 hover:text-[#00A651] transition-colors">
+                    Voir tout le blog
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
+                        <span
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            Lancement
+                        </span>
+                        <img src="https://images.squarespace-cdn.com/content/v1/665a6f8f14819f41fdb75fac/05c2d13c-1101-46bc-ad2a-dbcf4eb6f9ca/IMG_7690.png"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Gozem Money">
+                    </div>
+
+                    <div class="px-2">
+                        <div
+                            class="flex items-center gap-2 text-[10px] text-slate-400 font-medium uppercase tracking-widest mb-3">
+                            <span>30 Juil 2025</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>4 min</span>
+                        </div>
+                        <h3
+                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            Lancement imminent de Gozem Money au Togo
+                        </h3>
+                        <div
+                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            Lire l'article <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
+                        <span
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            Formation
+                        </span>
+                        <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/07/2.png"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Graduate Training">
+                    </div>
+
+                    <div class="px-2">
+                        <div
+                            class="flex items-center gap-2 text-[10px] text-slate-400 font-medium uppercase tracking-widest mb-3">
+                            <span>28 Juil 2025</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>5 min</span>
+                        </div>
+                        <h3
+                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            4e cohorte du Graduate Training Program
+                        </h3>
+                        <div
+                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            Lire l'article <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
+                        <span
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            Innovation
+                        </span>
+                        <img src="https://www.togofirst.com/media/k2/items/cache/03160998318f697230a7e611fb0fa87d_L.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Livraison">
+                    </div>
+
+                    <div class="px-2">
+                        <div
+                            class="flex items-center gap-2 text-[10px] text-slate-400 font-medium uppercase tracking-widest mb-3">
+                            <span>25 Juil 2025</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>3 min</span>
+                        </div>
+                        <h3
+                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            Révolution de la livraison express urbaine
+                        </h3>
+                        <div
+                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            Lire l'article <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
+                        <span
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            Finance
+                        </span>
+                        <img src="https://secretsdelatech.com/wp-content/uploads/2025/08/Gozem-Money-le-portefeuille-numerique-qui-sinstalle-en-silence-1024x683.jpg"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Series B">
+                    </div>
+
+                    <div class="px-2">
+                        <div
+                            class="flex items-center gap-2 text-[10px] text-slate-400 font-medium uppercase tracking-widest mb-3">
+                            <span>20 Juil 2025</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>6 min</span>
+                        </div>
+                        <h3
+                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            Levée de fonds : 30 millions $ pour l'expansion
+                        </h3>
+                        <div
+                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            Lire l'article <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 dark:bg-slate-950 font-['Poppins']">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-xl">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
+                        Nos clients parlent de nous
+                    </h2>
+                    <p class="text-slate-500 dark:text-slate-400">Découvrez pourquoi des milliers d'utilisateurs font
+                        confiance à Gozem chaque jour.</p>
+                </div>
+
+                <div class="flex gap-3">
+                    <button
+                        class="swiper-prev w-12 h-12 rounded-full border border-gray-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#00A651] hover:text-white transition-all shadow-sm">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button
+                        class="swiper-next w-12 h-12 rounded-full border border-gray-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#00A651] hover:text-white transition-all shadow-sm">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-800 flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://ui-avatars.com/api/?name=Koffi+A.&background=00A651&color=fff" alt="Avatar"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-slate-800 dark:text-white text-sm">Koffi Arnauld</h4>
+                            <p class="text-xs text-gray-400">Togo</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow">
+                        "Rien d'autre à dire que tout est impeccable. La satisfaction est parfaite pour mes trajets
+                        quotidiens. Vous êtes très opérationnels."
+                    </p>
+
+                    <div class="pt-6 border-t border-gray-50 dark:border-slate-800 flex justify-between items-center">
+                        <span class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Trustpilot</span>
+                        <a href="#"
+                            class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2 hover:text-[#00A651] transition">
+                            Voir l'avis <i class="fa fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-800 flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 bg-[#00A651]/10 rounded-full flex items-center justify-center text-[#00A651] font-bold">
+                            MJ</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 dark:text-white text-sm">Moussa Jean</h4>
+                            <p class="text-xs text-gray-400">Bénin</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow">
+                        "3 ans d'utilisation sans problème avec l'application. C'est la fierté de l'Afrique. Gozem
+                        aujourd'hui et pour toujours."
+                    </p>
+
+                    <div class="pt-6 border-t border-gray-50 dark:border-slate-800 flex justify-between items-center">
+                        <span class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Google Play</span>
+                        <a href="#"
+                            class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2 hover:text-[#00A651] transition">
+                            Voir l'avis <i class="fa fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-800 flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://ui-avatars.com/api/?name=Fatou+B.&background=00A651&color=fff" alt="Avatar"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-slate-800 dark:text-white text-sm">Fatou Bakary</h4>
+                            <p class="text-xs text-gray-400">Gabon</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                        <i class="fa fa-star text-yellow-400 text-xs"></i>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow">
+                        "Une assistance parfaite. J'avais une question sur une livraison et le service client m'a
+                        répondu très rapidement. Efficacité totale."
+                    </p>
+
+                    <div class="pt-6 border-t border-gray-50 dark:border-slate-800 flex justify-between items-center">
+                        <span class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">App Store</span>
+                        <a href="#"
+                            class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2 hover:text-[#00A651] transition">
+                            Voir l'avis <i class="fa fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <button
+                    class="bg-[#00A651] hover:bg-[#008d44] text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg shadow-green-500/20 active:scale-95 flex items-center gap-3 mx-auto">
+                    Donner mon avis <i class="fa fa-plus text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#00A651] text-white pt-16 font-['Poppins']">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div
+                class="flex flex-col lg:flex-row items-center justify-between bg-white/10 rounded-[35px] p-8 md:p-12 mb-16 border border-white/10">
+                <div class="text-center lg:text-left mb-8 lg:mb-0">
+                    <h3 class="text-2xl md:text-3xl font-black mb-2">Prêt à simplifier votre vie ?</h3>
+                    <p class="opacity-80">Téléchargez l'application Gozem dès maintenant.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="transition-transform hover:scale-105">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            class="h-12 w-auto" alt="Google Play">
+                    </a>
+                    <a href="#" class="transition-transform hover:scale-105">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                            class="h-12 w-auto" alt="App Store">
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <div class="space-y-6">
+                    <img src="logo-white.png" class="h-10" alt="Gozem">
+                    <p class="text-sm leading-relaxed opacity-80">
+                        Gozem est la super application n° 1 en Afrique qui fournit des services de transport, de
+                        livraison et financiers.
+                    </p>
+                    <p class="text-sm font-bold italic opacity-100">
+                        Faire sourire l'Afrique. 😊
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-sm"></i> Adresse
+                    </h4>
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        Gozem Bénin, Immeuble Blanc,<br>
+                        Route des pêches, Cotonou.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-headset text-sm"></i> Assistance
+                    </h4>
+                    <ul class="text-sm space-y-4">
+                        <li class="opacity-80">E-mail: <a href="mailto:group@gozem.co"
+                                class="hover:text-white font-medium underline">group@gozem.co</a></li>
+                        <li><a href="#"
+                                class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all inline-block">Une
+                                plainte ? Contactez-nous</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Explorer</h4>
+                    <ul class="text-sm space-y-3 opacity-80">
+                        <li><a href="#" class="hover:translate-x-1 hover:opacity-100 transition-all inline-block">Help
+                                Center</a></li>
+                        <li><a href="#"
+                                class="hover:translate-x-1 hover:opacity-100 transition-all inline-block">Rejoignez-nous</a>
+                        </li>
+                        <li><a href="#" class="hover:translate-x-1 hover:opacity-100 transition-all inline-block">Blog
+                                Actualités</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white/10 mb-8">
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-12">
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00A651] hover:scale-110 transition-transform shadow-lg">
+                        <img src="icones/facebook.png" alt="facebook logo" class="w-4 h-4">
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00A651] hover:scale-110 transition-transform shadow-lg">
+                        <img src="icones/linkedin.png" alt="linkedin logo" class="w-4 h-4">
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00A651] hover:scale-110 transition-transform shadow-lg">
+                        <img src="icones/twitter.png" alt="twitter logo" class="w-4 h-4">
+                    </a>
+                </div>
+
+                <div class="flex gap-3">
+                    <button
+                        class="flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm hover:bg-white/20 transition-all">
+                        <span>🇧🇯</span> Bénin <i class="fas fa-chevron-down text-[10px] opacity-60"></i>
+                    </button>
+                    <button
+                        class="flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm hover:bg-white/20 transition-all">
+                        <i class="fas fa-globe"></i> Français <i class="fas fa-chevron-down text-[10px] opacity-60"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#008d44] py-6">
+            <div
+                class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] opacity-70">
+                <p>© Copyright Gozem 2026. Tous droits réservés.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+                    <a href="#" class="hover:text-white transition-colors">CGU</a>
+                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+
+        function switchTab(tabName) {
+            // 1. Cacher tous les contenus
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+
+            // 2. Réinitialiser le style de tous les boutons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-[#00A651]', 'text-white', 'shadow-md');
+                btn.classList.add('text-gray-500', 'dark:text-slate-400');
+            });
+
+            // 3. Afficher le contenu sélectionné
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+
+            // 4. Activer le bouton sélectionné
+            const activeBtn = document.getElementById('btn-' + tabName);
+            activeBtn.classList.add('bg-[#00A651]', 'text-white', 'shadow-md');
+            activeBtn.classList.remove('text-gray-500', 'dark:text-slate-400');
+        }
+    </script>
+
+</body>
+
+</html>

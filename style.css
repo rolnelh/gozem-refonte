@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Couleurs de marque */
+    --gozem-green: #00A651;
+    
+    /* Mode Clair */
+    --color-bg-topbar: #f3f4f6;    /* gray-100 */
+    --color-bg-header: #ffffff;    /* white */
+    --color-border: #f3f4f6;       /* gray-100 / 200 */
+    --color-text-nav: #374151;     /* gray-700 */
+    --color-text-muted: #9ca3af;   /* gray-400 */
+    --color-bg-dropdown: #ffffff;
+  }
+
+  /* La classe .dark est activée par ton JS */
+  .dark {
+    --color-bg-topbar: #0f172a;    /* slate-900 */
+    --color-bg-header: #020617;    /* slate-955 (bg-slate-950/95) */
+    --color-border: #1e293b;       /* slate-800 */
+    --color-text-nav: #e2e8f0;     /* slate-200 */
+    --color-text-muted: #94a3b8;   /* gray-400 sombre */
+    --color-bg-dropdown: #0f172a;  /* slate-900 */
+  }
+}
