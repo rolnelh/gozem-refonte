@@ -28,148 +28,182 @@
 
 <body class="bg-white dark:bg-gray-800">
 
-   <header x-data="{ mobileMenuOpen: false }"
-    class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 transition-all duration-300">
+    <header x-data="{ mobileMenuOpen: false }"
+        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 transition-all duration-300">
 
-    <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
 
-        <div class="flex-shrink-0">
-            <a href="/" class="text-xl md:text-2xl font-black text-[#00A651] dark:text-white tracking-tighter">
-                GOZEM
-            </a>
-        </div>
-
-        <nav class="hidden lg:flex items-center space-x-7">
-            <a href="partner.html" class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Devenir Partenaire</a>
-            <a href="#services" class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Nos Services</a>
-
-            <div class="relative group">
-                <button class="flex items-center gap-1 text-[14px] font-normal text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition py-8">
-                    Nous Rejoindre ?
-                    <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="absolute left-0 w-64 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[70] p-2">
-                    <a href="carriere.html" class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Carrières</a>
-                    <a href="offres.html" class="block px-4 py-3 text-sm font-medium text-[#00A651] hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-bold">Offres d'emplois</a>
-                    <a href="metiers.html" class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Métiers & Départements</a>
-                    <hr class="my-1 border-gray-100 dark:border-slate-800">
-                    <a href="programmes.html" class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition italic text-opacity-70">Programmes Spécialisés</a>
-                </div>
-            </div>
-
-            <a href="#" class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Centre d'aide</a>
-        </nav>
-
-        <div class="flex items-center gap-2 sm:gap-4">
-
-            <div class="relative group hidden md:block">
-                <button class="flex items-center gap-1.5 text-[14px] font-medium text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition-colors py-4">
-                    <span>FR</span>
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="absolute right-0 w-32 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-1 z-[70] p-1.5 overflow-hidden">
-                    <a href="#" class="flex items-center justify-between px-3 py-2 text-[13px] font-semibold text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg transition">
-                        English <span class="text-[10px] opacity-40">EN</span>
-                    </a>
-                </div>
-            </div>
-
-            <button id="theme-toggle" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-all">
-                <img src="icones/day-mode.png" id="theme-toggle-light-icon" class="w-5 h-5 block dark:hidden" alt="Light">
-                <img src="icones/night-mode.png" id="theme-toggle-dark-icon" class="w-5 h-5 hidden dark:block" alt="Dark">
-            </button>
-
-            <div class="relative group hidden md:block">
-                <button class="flex items-center space-x-1.5 bg-gray-50 dark:bg-slate-900 px-3 py-2 rounded-xl border border-transparent hover:border-[#00A651] transition-all">
-                    <img src="icones/world-flag.png" alt="Bénin" class="w-5 h-auto rounded-sm">
-                    <span class="text-[11px] font-bold dark:text-white">Bénin</span>
-                    <svg class="w-2.5 h-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[60] overflow-hidden p-1">
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-xs font-medium hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">
-                        <img src="icones/world-flag (1).png" class="w-4 h-auto" alt="Togo"> <span>Togo</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-xs font-medium hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">
-                        <img src="icones/cameroon.png" class="w-4 h-auto" alt="Cameroun"> <span>Cameroun</span>
-                    </a>
-                </div>
-            </div>
-
-            <button @click="mobileMenuOpen = !mobileMenuOpen"
-                class="lg:hidden p-2.5 text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
-                <svg x-show="!mobileMenuOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-                <svg x-show="mobileMenuOpen" x-cloak class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-
-    <div x-show="mobileMenuOpen" 
-        x-cloak
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 -translate-y-10" 
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-200" 
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-10"
-        class="lg:hidden fixed inset-x-0 top-20 bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800 shadow-2xl z-40 max-h-[calc(100vh-80px)] overflow-y-auto px-6 py-8">
-
-        <div class="flex flex-col space-y-6">
-            <a href="partner.html" class="text-xl font-black text-gray-900 dark:text-white">Devenir Partenaire</a>
-            <a href="#services" class="text-xl font-black text-gray-900 dark:text-white">Nos Services</a>
-
-            <div class="space-y-4 pt-4 border-t border-gray-100 dark:border-slate-800">
-                <p class="text-[10px] font-black text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
-                <div class="grid grid-cols-1 gap-4">
-                    <a href="carriere.html" class="text-gray-600 dark:text-slate-400 font-medium">Carrières</a>
-                    <a href="offres.html" class="text-[#00A651] font-bold">Offres d'emplois</a>
-                    <a href="metiers.html" class="text-gray-600 dark:text-slate-400 font-medium">Métiers & Départements</a>
-                    <a href="programmes.html" class="text-gray-500 dark:text-slate-500 italic text-sm">Programmes Spécialisés</a>
-                </div>
-            </div>
-
-            <div class="pt-6 border-t border-gray-100 dark:border-slate-800 flex flex-col gap-4">
-                <div class="flex items-center justify-between">
-                    <span class="text-sm font-bold text-gray-900 dark:text-white">Langue</span>
-                    <select class="bg-transparent text-sm font-bold text-[#00A651]">
-                        <option>Français (FR)</option>
-                        <option>English (EN)</option>
-                    </select>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-sm font-bold text-gray-900 dark:text-white">Pays</span>
-                    <div class="flex items-center gap-2 text-sm font-bold text-[#00A651]">
-                        <img src="icones/world-flag.png" class="w-4 h-auto" alt="Bénin">
-                        <span>Bénin</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt-6 border-t border-gray-100 dark:border-slate-800">
-                <a href="#" class="flex items-center justify-between text-lg font-bold text-gray-800 dark:text-white">
-                    Centre d'aide
-                    <svg class="w-5 h-5 opacity-40" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8c0 1.105-.423 1.912-1.008 2.47-.502.48-.992.67-1.142.812-.132.124-.15.22-.15.318a1 1 0 11-2 0c0-1.018.533-1.802 1.14-2.383.568-.544.86-1.02.86-1.427a1 1 0 00-1-1zM11 14a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path>
-                    </svg>
+            <div class="flex-shrink-0">
+                <a href="/" class="text-xl md:text-2xl font-black text-[#00A651] dark:text-white tracking-tighter">
+                    GOZEM
                 </a>
             </div>
-        </div>
-    </div>
-</header>
 
-<style>
-    /* Empêche le flash de contenu Alpine avant le chargement */
-    [x-cloak] { display: none !important; }
-</style>
+            <nav class="hidden lg:flex items-center space-x-7">
+                <a href="partner.html"
+                    class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Devenir
+                    Partenaire</a>
+                <a href="#services"
+                    class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Nos
+                    Services</a>
+
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-[14px] font-normal text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition py-8">
+                        Nous Rejoindre ?
+                        <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute left-0 w-64 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[70] p-2">
+                        <a href="carriere.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Carrières</a>
+                        <a href="offres.html"
+                            class="block px-4 py-3 text-sm font-medium text-[#00A651] hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-bold">Offres
+                            d'emplois</a>
+                        <a href="metiers.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Métiers
+                            & Départements</a>
+                        <hr class="my-1 border-gray-100 dark:border-slate-800">
+                        <a href="programmes.html"
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition italic text-opacity-70">Programmes
+                            Spécialisés</a>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="text-[14px] font-normal text-gray-700 dark:text-slate-200 hover:text-[#00A651] transition">Centre
+                    d'aide</a>
+            </nav>
+
+            <div class="flex items-center gap-2 sm:gap-4">
+
+                <div class="relative group hidden md:block">
+                    <button
+                        class="flex items-center gap-1.5 text-[14px] font-medium text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition-colors py-4">
+                        <span>FR</span>
+                        <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 opacity-60"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute right-0 w-32 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-1 z-[70] p-1.5 overflow-hidden">
+                        <a href="#"
+                            class="flex items-center justify-between px-3 py-2 text-[13px] font-semibold text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg transition">
+                            English <span class="text-[10px] opacity-40">EN</span>
+                        </a>
+                    </div>
+                </div>
+
+                <button id="theme-toggle"
+                    class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-all">
+                    <img src="icones/day-mode.png" id="theme-toggle-light-icon" class="w-5 h-5 block dark:hidden"
+                        alt="Light">
+                    <img src="icones/night-mode.png" id="theme-toggle-dark-icon" class="w-5 h-5 hidden dark:block"
+                        alt="Dark">
+                </button>
+
+                <div class="relative group hidden md:block">
+                    <button
+                        class="flex items-center space-x-1.5 bg-gray-50 dark:bg-slate-900 px-3 py-2 rounded-xl border border-transparent hover:border-[#00A651] transition-all">
+                        <img src="icones/world-flag.png" alt="Bénin" class="w-5 h-auto rounded-sm">
+                        <span class="text-[11px] font-bold dark:text-white">Bénin</span>
+                        <svg class="w-2.5 h-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[60] overflow-hidden p-1">
+                        <a href="#"
+                            class="flex items-center space-x-3 px-4 py-3 text-xs font-medium hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">
+                            <img src="icones/world-flag (1).png" class="w-4 h-auto" alt="Togo"> <span>Togo</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center space-x-3 px-4 py-3 text-xs font-medium hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">
+                            <img src="icones/cameroon.png" class="w-4 h-auto" alt="Cameroun"> <span>Cameroun</span>
+                        </a>
+                    </div>
+                </div>
+
+                <button @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="lg:hidden p-2.5 text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
+                    <svg x-show="!mobileMenuOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                    <svg x-show="mobileMenuOpen" x-cloak class="w-7 h-7" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-cloak x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-10" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-10"
+            class="lg:hidden fixed inset-x-0 top-20 bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800 shadow-2xl z-40 max-h-[calc(100vh-80px)] overflow-y-auto px-6 py-8">
+
+            <div class="flex flex-col space-y-6">
+                <a href="partner.html" class="text-xl font-black text-gray-900 dark:text-white">Devenir Partenaire</a>
+                <a href="#services" class="text-xl font-black text-gray-900 dark:text-white">Nos Services</a>
+
+                <div class="space-y-4 pt-4 border-t border-gray-100 dark:border-slate-800">
+                    <p class="text-[10px] font-black text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <a href="carriere.html" class="text-gray-600 dark:text-slate-400 font-medium">Carrières</a>
+                        <a href="offres.html" class="text-[#00A651] font-bold">Offres d'emplois</a>
+                        <a href="metiers.html" class="text-gray-600 dark:text-slate-400 font-medium">Métiers &
+                            Départements</a>
+                        <a href="programmes.html" class="text-gray-500 dark:text-slate-500 italic text-sm">Programmes
+                            Spécialisés</a>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-slate-800 flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-bold text-gray-900 dark:text-white">Langue</span>
+                        <select class="bg-transparent text-sm font-bold text-[#00A651]">
+                            <option>Français (FR)</option>
+                            <option>English (EN)</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-bold text-gray-900 dark:text-white">Pays</span>
+                        <div class="flex items-center gap-2 text-sm font-bold text-[#00A651]">
+                            <img src="icones/world-flag.png" class="w-4 h-auto" alt="Bénin">
+                            <span>Bénin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-slate-800">
+                    <a href="#"
+                        class="flex items-center justify-between text-lg font-bold text-gray-800 dark:text-white">
+                        Centre d'aide
+                        <svg class="w-5 h-5 opacity-40" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8c0 1.105-.423 1.912-1.008 2.47-.502.48-.992.67-1.142.812-.132.124-.15.22-.15.318a1 1 0 11-2 0c0-1.018.533-1.802 1.14-2.383.568-.544.86-1.02.86-1.427a1 1 0 00-1-1zM11 14a1 1 0 11-2 0 1 1 0 012 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 
     <section class="relative w-full min-h-[67px] flex items-center bg-white dark:bg-slate-950 py-12 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
@@ -274,7 +308,7 @@
     <section class="pb-20 bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
 
-           <div class="flex justify-center mb-12 px-4">
+            <div class="flex justify-center mb-12 px-4">
                 <div
                     class="inline-flex p-1.5 bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-full shadow-sm max-w-full overflow-x-auto no-scrollbar">
 
@@ -835,8 +869,8 @@
         </div>
     </section>
 
-    <section class="py-24 overflow-hidden">
-        <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <section class="py-24 overflow-hidden max-w-5xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
 
             <div class="relative flex justify-center lg:justify-start">
                 <div class="absolute inset-0 bg-green-100/50 dark:bg-green-900/10 blur-3xl rounded-full scale-75"></div>
