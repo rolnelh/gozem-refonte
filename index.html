@@ -7,8 +7,7 @@
     <title>Refonte Gozem</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -19,7 +18,7 @@
 
 <style>
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Syne', sans-serif;
     }
 
     html {
@@ -30,7 +29,7 @@
 <body class="bg-white dark:bg-gray-800">
 
     <header x-data="{ mobileMenuOpen: false }"
-        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 font-['Poppins'] transition-all duration-300">
+        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 transition-all duration-300">
 
         <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
 
@@ -189,13 +188,12 @@
         </div> -->
     </header>
 
-    <section
-        class="relative w-full min-h-[67px] flex items-center bg-white dark:bg-slate-950 font-['Poppins'] py-16 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section class="relative w-full min-h-[67px] flex items-center bg-white dark:bg-slate-950 py-12 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
 
             <div class="z-10 text-center lg:text-left">
                 <h1
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white leading-tight mb-6">
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-800 dark:text-white leading-tight mb-6">
                     <span class="text-[#00A651]">GOZEM</span> <br class="hidden md:block"> Simplifie votre quotidien
                 </h1>
 
@@ -217,23 +215,23 @@
             </div>
 
             <div class="relative flex justify-center items-center">
-                <div class="absolute w-[140%] h-[140%] bg-slate-50 dark:bg-slate-900/50 rounded-full -z-10"></div>
+                <div class="absolute w-[120%] h-[120%] bg-slate-50 dark:bg-slate-900/50 rounded-full -z-10"></div>
 
                 <div class="relative">
                     <div
-                        class="w-[320px] md:w-[450px] lg:w-[500px] relative z-20 drop-shadow-[0_35px_60px_rgba(0,0,0,0.15)] transform rotate-[-5deg] transition-transform duration-700 hover:rotate-0">
-                        <img src="images/phone.png" alt="Gozem App" class="w-full h-auto object-contain">
+                        class="w-[320px] md:w-[480px] lg:w-[550px] relative z-20 drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-transform duration-700 hover:scale-105">
+                        <img src="images/carte.png" alt="Gozem Delivery" class="w-full h-auto object-contain">
                     </div>
 
                     <div
-                        class="absolute -right-8 md:-right-12 top-1/4 z-30 bg-white dark:bg-slate-800 p-4 md:p-5 rounded-[2rem] shadow-2xl border border-gray-50 dark:border-slate-700 animate-bounce-slow">
+                        class="absolute -right-4 md:-right-8 top-10 z-30 bg-white dark:bg-slate-800 p-4 md:p-5 rounded-[2rem] shadow-2xl border border-gray-50 dark:border-slate-700 animate-bounce-slow">
                         <div class="flex flex-col items-center gap-2">
                             <div
                                 class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-[#00A651]">
                                 <i class="fa fa-check-circle text-2xl"></i>
                             </div>
                             <div class="text-center">
-                                <p class="text-[13px] font-black text-slate-700 dark:text-white leading-none">Course
+                                <p class="text-[10px] font-black text-slate-700 dark:text-white leading-none">Course
                                     terminée</p>
                                 <p class="text-[10px] text-gray-400 mt-1">Paiement validé</p>
                             </div>
@@ -241,14 +239,14 @@
                     </div>
 
                     <div
-                        class="absolute -left-12 md:-left-20 bottom-1/4 z-30 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-gray-50 dark:border-slate-700">
+                        class="absolute -left-8 md:-left-16 bottom-20 z-30 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-gray-50 dark:border-slate-700">
                         <div class="flex items-center gap-4">
                             <div
                                 class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                                 <i class="fa fa-map-marker text-lg"></i>
                             </div>
                             <div class="text-left">
-                                <p class="text-[11px] font-bold dark:text-white uppercase tracking-wider">Arrivée dans
+                                <p class="text-[10px] font-bold dark:text-white uppercase tracking-wider">Arrivée dans
                                 </p>
                                 <p class="text-[16px] font-black text-[#00A651]">3 min</p>
                             </div>
@@ -257,17 +255,6 @@
                 </div>
             </div>
 
-        </div>
-
-        <div class="fixed bottom-6 right-6 z-[100] flex items-end gap-3 group">
-            <div
-                class="bg-white dark:bg-slate-800 px-4 py-2 rounded-xl shadow-lg border border-gray-100 dark:border-slate-700 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                Besoin d'aide ?
-            </div>
-            <button
-                class="w-14 h-14 bg-blue-600 rounded-full shadow-2xl flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform">
-                <i class="fa fa-comments"></i>
-            </button>
         </div>
     </section>
 
@@ -329,7 +316,7 @@
             <div
                 class="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-[40px] p-8 md:p-12 shadow-sm min-h-[400px]">
 
-                <div id="content-clients" class="tab-content animate-fade-in font-['Poppins']">
+                <div id="content-clients" class="tab-content animate-fade-in">
 
                     <div class="mb-12">
                         <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
@@ -450,7 +437,7 @@
                     </div>
                 </div>
 
-                <div id="content-champions" class="tab-content hidden animate-fade-in font-['Poppins']">
+                <div id="content-champions" class="tab-content hidden animate-fade-in">
 
                     <div class="mb-12">
                         <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
@@ -592,7 +579,7 @@
                     </div>
                 </div>
 
-                <div id="content-marchands" class="tab-content hidden animate-fade-in font-['Poppins']">
+                <div id="content-marchands" class="tab-content hidden animate-fade-in">
 
                     <div class="mb-12">
                         <h3
@@ -656,7 +643,7 @@
                     </div>
                 </div>
 
-                <div id="content-entreprises" class="tab-content hidden animate-fade-in font-['Poppins']">
+                <div id="content-entreprises" class="tab-content hidden animate-fade-in">
 
                     <div class="mb-12">
                         <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 text-center">
@@ -733,7 +720,7 @@
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-16 font-['Poppins']">
+    <section class="max-w-7xl mx-auto px-6 py-16">
         <div
             class="relative w-full bg-[#00A651] rounded-[40px] overflow-hidden p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between">
 
@@ -741,7 +728,7 @@
                 <p class="text-sm md:text-base font-normal mb-4 opacity-90 tracking-wide">Téléchargez notre application
                     mobile</p>
 
-                <h2 class="text-2xl md:text-3xl lg:text-3xl font-semibold leading-[1.1] mb-10 max-w-5xl">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-normal leading-[1.1] mb-10 max-w-5xl">
                     Commencez par voyager et commander facilement et plus rapidement
                 </h2>
 
@@ -775,18 +762,12 @@
             </div>
 
             <div class="relative mt-20 lg:mt-0 w-full lg:w-[45%] flex justify-center lg:justify-end items-end">
-                <div class="relative flex items-end -space-x-12 md:-space-x-16 lg:-space-x-20">
-
+                <div class="relative flex justify-center items-center w-full">
                     <div
-                        class="w-[180px] md:w-[280px] lg:w-[320px] transform translate-y-12 lg:translate-y-20 opacity-70 transition-transform duration-500 hover:translate-y-10">
-                        <img src="images/phone.png" alt="App Gozem Interface" class="w-full h-auto">
+                        class="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[900px] transition-transform duration-500 hover:scale-[1.02]">
+                        <img src="images/superapp.png" alt="Gozem Super App Desktop View"
+                            class="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] object-contain">
                     </div>
-
-                    <div class="w-[220px] md:w-[320px] lg:w-[380px] relative z-20">
-                        <img src="images/hero_img.png" alt="App Gozem Interface Main"
-                            class="w-full h-auto drop-shadow-[-30px_20px_50px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:scale-105">
-                    </div>
-
                 </div>
             </div>
 
@@ -798,7 +779,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white dark:bg-slate-950 font-['Poppins']">
+    <section class="py-20 bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6 text-center">
 
             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-12">
@@ -943,7 +924,7 @@
         }
     </style>
 
-    <section class="max-w-7xl mx-auto px-6 py-20 font-['Poppins']">
+    <section class="max-w-7xl mx-auto px-6 py-20">
         <div
             class="relative w-full bg-gradient-to-br from-[#001A3D] via-[#008d44] to-[#001A3D] rounded-[45px] overflow-hidden p-10 md:p-20 shadow-2xl">
 
@@ -1018,7 +999,7 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white dark:bg-slate-950 font-['Poppins']">
+    <section class="py-24 bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
 
             <div class="text-center mb-20">
@@ -1073,7 +1054,7 @@
 
                 <div class="relative flex justify-center py-10 scale-110 md:scale-125">
                     <div class="absolute inset-0  rounded-full scale-125 blur-3xl"></div>
-                    <img src="images/phone.png" alt="Fiabilité Gozem"
+                    <img src="images/go2.png" alt="Fiabilité Gozem"
                         class="relative z-10 w-full h-auto max-w-[350px] md:max-w-[400px] animate-float">
                 </div>
 
@@ -1117,7 +1098,7 @@
         }
     </style>
 
-    <section class="py-24 bg-white dark:bg-slate-950 font-['Poppins']">
+    <section class="py-24 bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
@@ -1257,7 +1238,7 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-50 dark:bg-slate-950 font-['Poppins']">
+    <section class="py-24 bg-gray-50 dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
 
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -1393,7 +1374,7 @@
         </div>
     </section>
 
-    <footer class="bg-[#00A651] text-white pt-16 font-['Poppins']">
+    <footer class="bg-[#00A651] text-white pt-16">
         <div class="max-w-7xl mx-auto px-6">
 
             <div
@@ -1510,21 +1491,15 @@
 
     <script>
 
-
-        function switchTab(tabName) {
-            // 1. Cacher tous les contenus
             document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
 
-            // 2. Réinitialiser le style de tous les boutons
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('bg-[#00A651]', 'text-white', 'shadow-md');
                 btn.classList.add('text-gray-500', 'dark:text-slate-400');
             });
 
-            // 3. Afficher le contenu sélectionné
             document.getElementById('content-' + tabName).classList.remove('hidden');
 
-            // 4. Activer le bouton sélectionné
             const activeBtn = document.getElementById('btn-' + tabName);
             activeBtn.classList.add('bg-[#00A651]', 'text-white', 'shadow-md');
             activeBtn.classList.remove('text-gray-500', 'dark:text-slate-400');
