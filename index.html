@@ -7,8 +7,7 @@
     <title>Refonte Gozem</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -19,7 +18,12 @@
 
 <style>
     body {
-        font-family: 'Syne', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Pas de texte plus gras que 500 sur tout le site */
+    b, strong, h1, h2, h3, h4, h5, h6, th {
+        font-weight: 500;
     }
 
     html {
@@ -37,7 +41,7 @@
         <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex justify-between items-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-full shadow-lg">
 
             <div class="flex-shrink-0">
-                <a href="index.html" class="logo text-xl md:text-2xl font-extrabold text-[#00A651] dark:text-white tracking-tight">
+                <a href="index.html" class="logo text-xl md:text-2xl font-medium text-[#00A651] dark:text-white tracking-tight">
                     GOZEM
                 </a>
             </div>
@@ -65,7 +69,7 @@
                         <a href="#"
                             class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Carrières</a>
                         <a href="#"
-                            class="block px-4 py-3 text-sm font-medium text-[#00A651] hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-bold">Offres
+                            class="block px-4 py-3 text-sm font-medium text-[#00A651] hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-medium">Offres
                             d'emplois</a>
                         <a href="#"
                             class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Métiers
@@ -97,7 +101,7 @@
                     <div
                         class="absolute right-0 w-32 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-1 z-[70] p-1.5 overflow-hidden">
                         <a href="#"
-                            class="flex items-center justify-between px-3 py-2 text-[13px] font-semibold text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg transition">
+                            class="flex items-center justify-between px-3 py-2 text-[13px] font-medium text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg transition">
                             English <span class="text-[10px] opacity-40">EN</span>
                         </a>
                     </div>
@@ -115,7 +119,7 @@
                     <button
                         class="flex items-center space-x-1.5 bg-gray-50 dark:bg-slate-900 px-3 py-2 rounded-xl border border-transparent hover:border-[#00A651] transition-all">
                         <img src="icones/world-flag.png" alt="Bénin" class="w-5 h-auto rounded-sm">
-                        <span class="text-[11px] font-bold dark:text-white">Bénin</span>
+                        <span class="text-[11px] font-medium dark:text-white">Bénin</span>
                         <svg class="w-2.5 h-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -133,7 +137,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="hidden md:inline-flex items-center gap-2 bg-slate-900 hover:bg-[#00A651] text-white text-xs font-semibold pl-4 pr-1.5 py-1.5 rounded-full transition">
+                <a href="#" class="hidden md:inline-flex items-center gap-2 bg-slate-900 hover:bg-[#00A651] text-white text-xs font-medium pl-4 pr-1.5 py-1.5 rounded-full transition">
                     Télécharger l'app
                     <span class="w-7 h-7 bg-[#00A651] rounded-full flex items-center justify-center"><i class="fa fa-arrow-right"></i></span>
                 </a>
@@ -160,14 +164,14 @@
             class="lg:hidden fixed inset-x-4 top-24 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl z-40 max-h-[calc(100vh-112px)] overflow-y-auto px-6 py-8">
 
             <div class="flex flex-col space-y-6">
-                <a href="partner.html" class="text-xl font-black text-gray-900 dark:text-white">Devenir Partenaire</a>
-                <a href="#services" class="text-xl font-black text-gray-900 dark:text-white">Nos Services</a>
+                <a href="partner.html" class="text-xl font-medium text-gray-900 dark:text-white">Devenir Partenaire</a>
+                <a href="#services" class="text-xl font-medium text-gray-900 dark:text-white">Nos Services</a>
 
                 <div class="space-y-4 pt-4 border-t border-gray-100 dark:border-slate-800">
-                    <p class="text-[10px] font-black text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
+                    <p class="text-[10px] font-medium text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
                     <div class="grid grid-cols-1 gap-4">
                         <a href="carriere.html" class="text-gray-600 dark:text-slate-400 font-medium">Carrières</a>
-                        <a href="offres.html" class="text-[#00A651] font-bold">Offres d'emplois</a>
+                        <a href="offres.html" class="text-[#00A651] font-medium">Offres d'emplois</a>
                         <a href="metiers.html" class="text-gray-600 dark:text-slate-400 font-medium">Métiers &
                             Départements</a>
                         <a href="programmes.html" class="text-gray-500 dark:text-slate-500 italic text-sm">Programmes
@@ -177,15 +181,15 @@
 
                 <div class="pt-6 border-t border-gray-100 dark:border-slate-800 flex flex-col gap-4">
                     <div class="flex items-center justify-between">
-                        <span class="text-sm font-bold text-gray-900 dark:text-white">Langue</span>
-                        <select class="bg-transparent text-sm font-bold text-[#00A651]">
+                        <span class="text-sm font-medium text-gray-900 dark:text-white">Langue</span>
+                        <select class="bg-transparent text-sm font-medium text-[#00A651]">
                             <option>Français (FR)</option>
                             <option>English (EN)</option>
                         </select>
                     </div>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm font-bold text-gray-900 dark:text-white">Pays</span>
-                        <div class="flex items-center gap-2 text-sm font-bold text-[#00A651]">
+                        <span class="text-sm font-medium text-gray-900 dark:text-white">Pays</span>
+                        <div class="flex items-center gap-2 text-sm font-medium text-[#00A651]">
                             <img src="icones/world-flag.png" class="w-4 h-auto" alt="Bénin">
                             <span>Bénin</span>
                         </div>
@@ -194,7 +198,7 @@
 
                 <div class="pt-6 border-t border-gray-100 dark:border-slate-800">
                     <a href="#"
-                        class="flex items-center justify-between text-lg font-bold text-gray-800 dark:text-white">
+                        class="flex items-center justify-between text-lg font-medium text-gray-800 dark:text-white">
                         Centre d'aide
                         <svg class="w-5 h-5 opacity-40" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -224,27 +228,27 @@
             <!-- Texte -->
             <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-32 pb-8 lg:pt-44 lg:pb-32">
                 <div class="max-w-xl">
-                    <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
+                    <h1 class="text-5xl lg:text-7xl font-medium text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
                         Votre trajet,<br>en quelques<br>
                         <span class="text-[#00A651]">clics.</span>
                     </h1>
                     <p class="text-slate-600 dark:text-slate-300 max-w-sm mb-8">
                         Moto, taxi ou tricycle : commandez une course, voyez le prix avant de partir et suivez votre chauffeur en temps réel.
                     </p>
-                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg transition">
+                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-medium text-sm px-6 py-3.5 rounded-full shadow-lg transition">
                         <i class="fa fa-play text-[#00A651]"></i> Télécharger l'app
                     </a>
                     <div class="flex gap-10 mt-12">
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Moto & Auto</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Moto & Auto</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Selon votre besoin</p>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Prix affiché</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Prix affiché</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Avant de commander</p>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Suivi live</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Suivi live</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Trajet partageable</p>
                         </div>
                     </div>
@@ -252,7 +256,7 @@
             </div>
 
             <!-- Image : sous le texte sur mobile, en fond sur grand écran -->
-            <img src="images/phone.jpg" alt="" class="w-full h-72 object-cover object-center lg:absolute lg:inset-0 lg:h-full">
+            <img src="images/hero-transport.jpg" alt="La flotte Gozem : moto, tricycle et voitures" class="w-full h-72 object-cover object-center lg:absolute lg:inset-0 lg:h-full">
 
             <!-- Léger voile blanc derrière le texte seulement (à gauche) -->
             <div class="hidden lg:block absolute inset-0 bg-linear-to-r from-white/75 via-white/40 via-35% to-transparent to-55% dark:from-slate-950/75 dark:via-slate-950/40"></div>
@@ -263,27 +267,27 @@
             <!-- Texte -->
             <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-32 pb-8 lg:pt-44 lg:pb-32">
                 <div class="max-w-xl">
-                    <h2 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
+                    <h2 class="text-5xl lg:text-7xl font-medium text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
                         <span class="lg:whitespace-nowrap">Repas, courses, colis,</span><br>
                         <span class="text-[#00A651] lg:whitespace-nowrap">livrés maintenant.</span>
                     </h2>
                     <p class="text-slate-600 dark:text-slate-300 max-w-sm mb-8">
                         Vos restaurants préférés, le supermarché du quartier ou un colis urgent : un livreur Gozem s'en occupe.
                     </p>
-                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg transition">
+                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-medium text-sm px-6 py-3.5 rounded-full shadow-lg transition">
                         <i class="fa fa-play text-[#00A651]"></i> Télécharger l'app
                     </a>
                     <div class="flex gap-10 mt-12">
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Restaurants</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Restaurants</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Plats locaux</p>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Courses</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Courses</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Supermarchés</p>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Colis</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Colis</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Envoyés en ville</p>
                         </div>
                     </div>
@@ -291,7 +295,7 @@
             </div>
 
             <!-- Image : sous le texte sur mobile, en fond sur grand écran -->
-            <img src="images/carriere_barner.png" alt="" class="w-full h-72 object-cover object-right lg:absolute lg:inset-0 lg:h-full">
+            <img src="images/hero-livraison.jpg" alt="Un livreur Gozem remet une commande" class="w-full h-72 object-cover object-right lg:absolute lg:inset-0 lg:h-full">
 
             <!-- Léger voile blanc derrière le texte seulement (à gauche) -->
             <div class="hidden lg:block absolute inset-0 bg-linear-to-r from-white/75 via-white/40 via-35% to-transparent to-55% dark:from-slate-950/75 dark:via-slate-950/40"></div>
@@ -302,27 +306,27 @@
             <!-- Texte -->
             <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-32 pb-8 lg:pt-44 lg:pb-32">
                 <div class="max-w-xl">
-                    <h2 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
+                    <h2 class="text-5xl lg:text-7xl font-medium text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
                         Payez, envoyez,<br>rechargez,<br>
                         <span class="text-[#00A651]">en toute sécurité.</span>
                     </h2>
                     <p class="text-slate-600 dark:text-slate-300 max-w-sm mb-8">
                         Avec Gozem Money, réglez vos courses, envoyez de l'argent à vos proches et rechargez votre crédit en un geste.
                     </p>
-                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg transition">
+                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-medium text-sm px-6 py-3.5 rounded-full shadow-lg transition">
                         <i class="fa fa-play text-[#00A651]"></i> Télécharger l'app
                     </a>
                     <div class="flex gap-10 mt-12">
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Gozem Money</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Gozem Money</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Votre portefeuille</p>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">À votre façon</p>
+                            <p class="font-medium text-slate-900 dark:text-white">À votre façon</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Mobile Money & cash</p>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 dark:text-white">Recharges</p>
+                            <p class="font-medium text-slate-900 dark:text-white">Recharges</p>
                             <p class="text-xs text-slate-500 dark:text-slate-400">Crédit & factures</p>
                         </div>
                     </div>
@@ -330,7 +334,7 @@
             </div>
 
             <!-- Image : sous le texte sur mobile, en fond sur grand écran -->
-            <img src="images/10172881.jpg" alt="" class="w-full h-72 object-cover object-right lg:absolute lg:inset-0 lg:h-full">
+            <img src="images/hero-paiement.png" alt="L'équipe Gozem" class="w-full h-72 object-cover object-right lg:absolute lg:inset-0 lg:h-full">
 
             <!-- Léger voile blanc derrière le texte seulement (à gauche) -->
             <div class="hidden lg:block absolute inset-0 bg-linear-to-r from-white/75 via-white/40 via-35% to-transparent to-55% dark:from-slate-950/75 dark:via-slate-950/40"></div>
@@ -346,14 +350,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Police du hero et du logo (comme la maquette) -->
-    <style>
-        .hero,
-        .logo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-    </style>
 
     <script>
         const slides = document.querySelectorAll('.hero-slide');
@@ -410,10 +406,10 @@
 
     <section class="py-8 bg-white dark:bg-slate-950 mt-8" id="services">
         <div class="max-w-4xl mx-auto text-center mb-8">
-            <span class="inline-block text-gray-700 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] mb-4">
+            <span class="inline-block text-gray-700 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] mb-4">
                 Nos Services
             </span>
-            <h2 class="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-[1.1] tracking-tighter">
+            <h2 class="text-4xl md:text-6xl font-medium text-gray-900 dark:text-white leading-[1.1] tracking-tighter">
                 Tout ce dont vous avez besoin, <br>
                 <span class="text-[#00A651]">dans une seule App.</span>
             </h2>
@@ -429,22 +425,22 @@
 
                     <div class="flex flex-nowrap items-center min-w-max">
                         <button onclick="switchTab('clients')" id="btn-clients"
-                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-bold rounded-full transition-all duration-300 bg-[#00A651] text-white shadow-md whitespace-nowrap">
+                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 bg-[#00A651] text-white shadow-md whitespace-nowrap">
                             Clients
                         </button>
 
                         <button onclick="switchTab('champions')" id="btn-champions"
-                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-bold rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white whitespace-nowrap">
+                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white whitespace-nowrap">
                             Champions
                         </button>
 
                         <button onclick="switchTab('marchands')" id="btn-marchands"
-                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-bold rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white whitespace-nowrap">
+                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white whitespace-nowrap">
                             Marchands
                         </button>
 
                         <button onclick="switchTab('entreprises')" id="btn-entreprises"
-                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-bold rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white whitespace-nowrap">
+                            class="tab-btn px-6 md:px-8 py-2.5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white whitespace-nowrap">
                             Entreprises
                         </button>
                     </div>
@@ -469,7 +465,7 @@
                 <div id="content-clients" class="tab-content animate-fade-in">
 
                     <div class="mb-12">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center">
                             <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Mobilité
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -479,7 +475,7 @@
                                     <img src="icones/scooter.png" class="w-10 h-10 object-contain" alt="Zem">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Zem</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Zem</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Une
                                         solution rapide et économique pour se déplacer partout, même aux heures de
                                         pointe.</p>
@@ -491,7 +487,7 @@
                                     <img src="icones/tricycle (1).png" class="w-10 h-10 object-contain" alt="Tricycle">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Tricycle</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Tricycle</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Un
                                         transport couvert, abordable et pratique pour rester à l'abri du soleil tout en
                                         respectant votre budget.</p>
@@ -503,7 +499,7 @@
                                     <img src="icones/taxi.png" class="w-10 h-10 object-contain" alt="Taxi">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Taxi</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Taxi</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Le confort
                                         et la tranquillité d'un voyage en voiture avec chauffeur pour de longues
                                         distances.</p>
@@ -515,7 +511,7 @@
                     <hr class="border-gray-100 dark:border-slate-800 my-12">
 
                     <div class="mb-12">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center">
                             <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Livraisons
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -525,7 +521,7 @@
                                     <img src="icones/fast-food.png" class="w-10 h-10 object-contain" alt="Restauration">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Restauration</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Restauration</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Commandez
                                         et faites-vous livrer toutes vos envies à votre porte.</p>
                                 </div>
@@ -536,7 +532,7 @@
                                     <img src="icones/online-shopping.png" class="w-10 h-10 object-contain" alt="Achats">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Achats</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Achats</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Trouvez
                                         tout ce dont vous avez besoin : produits d'épicerie et plus encore.</p>
                                 </div>
@@ -548,7 +544,7 @@
                                         alt="Coursier">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Coursier</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Coursier</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Faites
                                         envoyer vos colis directement à vos destinataires.</p>
                                 </div>
@@ -557,7 +553,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center">
                             <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Achats digitaux
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -567,7 +563,7 @@
                                     <img src="icones/ticket.png" class="w-10 h-10 object-contain" alt="Gaz">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Billeterie</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Billeterie</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Commandez
                                         votre bouteille de gaz domestique et faites-la livrer à votre porte.</p>
                                 </div>
@@ -578,7 +574,7 @@
                                     <img src="icones/payment.png" class="w-10 h-10 object-contain" alt="Crédit">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Crédit</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Crédit</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Rechargez
                                         votre crédit de communication auprès de votre opérateur.</p>
                                 </div>
@@ -590,7 +586,7 @@
                 <div id="content-champions" class="tab-content hidden animate-fade-in">
 
                     <div class="mb-12">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center">
                             <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Gagne ta vie
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -601,7 +597,7 @@
                                         class="w-10 h-10 object-contain" alt="Mise en relation">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Mise en relation clients
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Mise en relation clients
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Obtiens
                                         plus de courses et de clients chaque jour grâce à l’appli Gozem.</p>
@@ -613,7 +609,7 @@
                                     <img src="icones/success.png" class="w-10 h-10 object-contain" alt="Gestion">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Gestion de ton activité
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Gestion de ton activité
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Suis tes
                                         courses, tes revenus et gère ton activité directement depuis l’application.</p>
@@ -625,7 +621,7 @@
                                     <img src="icones/training.png" class="w-10 h-10 object-contain" alt="Coaching">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Coaching personnalisé
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Coaching personnalisé
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Profite
                                         des conseils et accompagnement de ton coach pour maximiser tes gains.</p>
@@ -639,7 +635,7 @@
                                     <img src="icones/growth.png" class="w-10 h-10 object-contain" alt="Évolution">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Évolution de carrière
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Évolution de carrière
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Deviens
                                         propriétaire de ta voiture et accède au statut de Champion Gold pour multiplier
@@ -652,7 +648,7 @@
                     <hr class="border-gray-100 dark:border-slate-800 my-12">
 
                     <div class="mb-12">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center">
                             <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Services financiers
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -662,7 +658,7 @@
                                     <img src="icones/profitability.png" class="w-10 h-10 object-contain" alt="Finance">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Financement du véhicule
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Financement du véhicule
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Finance ta
                                         voiture sans apport initial, avec prélèvements automatiques sur tes gains.</p>
@@ -674,7 +670,7 @@
                                     <img src="icones/mobile-banking.png" class="w-10 h-10 object-contain" alt="Phone">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Financement du téléphone
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Financement du téléphone
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Accède au
                                         financement d’un smartphone pour travailler efficacement avec l’appli Gozem.</p>
@@ -686,7 +682,7 @@
                                     <img src="icones/cash.png" class="w-10 h-10 object-contain" alt="Cash">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Avance d’argent</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Avance d’argent</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Obtiens
                                         une avance en cas de panne, d’accident ou de besoin ponctuel.</p>
                                 </div>
@@ -697,7 +693,7 @@
                     <hr class="border-gray-100 dark:border-slate-800 my-12">
 
                     <div class="mb-4">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center">
                             <span class="w-2 h-8 bg-[#00A651] rounded-full mr-4"></span> Sécurité & protection
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -707,7 +703,7 @@
                                     <img src="icones/tracking.png" class="w-10 h-10 object-contain" alt="Tracking">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Tracking véhicule</h4>
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Tracking véhicule</h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Protège ta
                                         voiture grâce au tracking intégré contre le vol.</p>
                                 </div>
@@ -719,7 +715,7 @@
                                         alt="Accident">
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Prise en charge accident
+                                    <h4 class="font-medium text-gray-900 dark:text-white text-lg">Prise en charge accident
                                     </h4>
                                     <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mt-1">Bénéficie
                                         d’une prise en charge rapide en cas d’accident ou d’aléas du métier.</p>
@@ -733,7 +729,7 @@
 
                     <div class="mb-12">
                         <h3
-                            class="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center text-center justify-center">
+                            class="text-2xl font-medium text-gray-900 dark:text-white mb-10 flex items-center text-center justify-center">
                             Développez votre entreprise
                         </h3>
 
@@ -745,7 +741,7 @@
                                         class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert"
                                         alt="Livraison physique">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3 px-4">Vente en ligne
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3 px-4">Vente en ligne
                                     avec Livraison (Produits physiques)</h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
                                     Vendez vos produits et bénéficiez de la logistique Gozem pour livrer vos clients en
@@ -760,7 +756,7 @@
                                         class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert"
                                         alt="QR Code">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3 px-4">Vente en ligne
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3 px-4">Vente en ligne
                                     avec accès par QR Code (sans livraison)</h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
                                     Proposez la vente de tickets, pass ou accès via l’application Gozem. Après l’achat,
@@ -775,7 +771,7 @@
                                         class="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert"
                                         alt="Publicité">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3 px-4">Publicité intégrée
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3 px-4">Publicité intégrée
                                 </h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
                                     Augmentez votre visibilité grâce à nos solutions de publicité intégrées sur la
@@ -787,7 +783,7 @@
 
                     <div class="mt-16 text-center">
                         <a href="#"
-                            class="inline-flex items-center justify-center px-10 py-4 bg-[#00A651] text-white font-bold rounded-full hover:bg-[#008d44] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            class="inline-flex items-center justify-center px-10 py-4 bg-[#00A651] text-white font-medium rounded-full hover:bg-[#008d44] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             Devenir Marchand Gozem
                         </a>
                     </div>
@@ -796,7 +792,7 @@
                 <div id="content-entreprises" class="tab-content hidden animate-fade-in">
 
                     <div class="mb-12">
-                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-10 text-center">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white mb-10 text-center">
                             Offres pour les entreprises
                         </h3>
 
@@ -807,7 +803,7 @@
                                     <img src="icones/car.png" class="w-10 h-10 object-contain"
                                         alt="Mobilité Entreprise">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Mobilité
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3">Mobilité
                                 </h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
                                     Facilitez les trajets de vos collaborateurs, partenaires ou clients.
@@ -818,7 +814,7 @@
                                         « Grâce à Gozem, nous optimisons la mobilité de nos équipes au
                                         quotidien. »
                                     </p>
-                                    <p class="text-[10px] font-bold mt-2 text-[#00A651]">TotalEnergies</p>
+                                    <p class="text-[10px] font-medium mt-2 text-[#00A651]">TotalEnergies</p>
                                 </div>
                             </div>
 
@@ -827,7 +823,7 @@
                                     class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
                                     <img src="icones/logistics.png" class="w-10 h-10 object-contain" alt="Logistique">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Logistique
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3">Logistique
                                     et Livraison</h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
                                     Gérez efficacement la livraison de vos marchandises.
@@ -839,7 +835,7 @@
                                     class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
                                     <img src="icones/traffic-jam.png" class="w-10 h-10 object-contain" alt="Flotte">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Gestion de
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3">Gestion de
                                     Flotte</h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
                                     Confiez-nous la gestion de vos véhicules pour un suivi et un entretien
@@ -855,7 +851,7 @@
                                     <img src="icones/public-relation.png" class="w-10 h-10 object-contain"
                                         alt="Publicité B2B">
                                 </div>
-                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-3">Publicité
+                                <h4 class="font-medium text-gray-900 dark:text-white text-lg mb-3">Publicité
                                 </h4>
                                 <p class="text-gray-500 dark:text-slate-400 text-sm leading-relaxed">
                                     Connectez votre entreprise à des clients potentiels grâce à des
@@ -903,7 +899,7 @@
                                 class="w-16 h-16">
                         </div>
                         <div class="max-w-[180px]">
-                            <p class="text-[13px] font-bold leading-snug mb-1">Scanner pour télécharger l'application
+                            <p class="text-[13px] font-medium leading-snug mb-1">Scanner pour télécharger l'application
                             </p>
                             <p class="text-[11px] opacity-70">iOS & Android</p>
                         </div>
@@ -932,7 +928,7 @@
     <section class="py-20 bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6 text-center">
 
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-12">
+            <h2 class="text-2xl md:text-3xl font-medium text-slate-800 dark:text-white mb-12">
                 Nous sommes disponibles dans tout ces pays
             </h2>
 
@@ -942,42 +938,42 @@
                     class="flex items-center gap-3 bg-red-50 dark:bg-red-900/10 px-6 py-3 rounded-full border border-red-100 dark:border-red-900/20 transition-transform hover:scale-105">
                     <img src="https://flagcdn.com/w40/bj.png" alt="Bénin"
                         class="w-6 h-4 object-cover rounded-sm shadow-sm">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Bénin</span>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Bénin</span>
                 </div>
 
                 <div
                     class="flex items-center gap-3 bg-yellow-50 dark:bg-yellow-900/10 px-6 py-3 rounded-full border border-yellow-100 dark:border-yellow-900/20 transition-transform hover:scale-105">
                     <img src="https://flagcdn.com/w40/tg.png" alt="Togo"
                         class="w-6 h-4 object-cover rounded-sm shadow-sm">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Togo</span>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Togo</span>
                 </div>
 
                 <div
                     class="flex items-center gap-3 bg-green-50 dark:bg-green-900/10 px-6 py-3 rounded-full border border-green-100 dark:border-green-900/20 transition-transform hover:scale-105">
                     <img src="https://flagcdn.com/w40/cm.png" alt="Cameroun"
                         class="w-6 h-4 object-cover rounded-sm shadow-sm">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Cameroun</span>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Cameroun</span>
                 </div>
 
                 <div
                     class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/10 px-6 py-3 rounded-full border border-blue-100 dark:border-blue-900/20 transition-transform hover:scale-105">
                     <img src="https://flagcdn.com/w40/ga.png" alt="Gabon"
                         class="w-6 h-4 object-cover rounded-sm shadow-sm">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Gabon</span>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Gabon</span>
                 </div>
 
                 <div
                     class="flex items-center gap-3 bg-emerald-50 dark:bg-emerald-900/10 px-6 py-3 rounded-full border border-emerald-100 dark:border-emerald-900/20 transition-transform hover:scale-105">
                     <img src="https://flagcdn.com/w40/sn.png" alt="Sénégal"
                         class="w-6 h-4 object-cover rounded-sm shadow-sm">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Sénégal</span>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Sénégal</span>
                 </div>
 
                 <div
                     class="flex items-center gap-3 bg-orange-50 dark:bg-orange-900/10 px-6 py-3 rounded-full border border-orange-100 dark:border-orange-900/20 transition-transform hover:scale-105">
                     <img src="https://flagcdn.com/w40/ci.png" alt="Côte d'Ivoire"
                         class="w-6 h-4 object-cover rounded-sm shadow-sm">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Côte d'Ivoire</span>
+                    <span class="font-medium text-slate-700 dark:text-slate-200">Côte d'Ivoire</span>
                 </div>
 
             </div>
@@ -995,7 +991,7 @@
                         <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/10/IMG_20251113_132017783_HDR_PORTRAIT-scaled-1-768x1024.jpg"
                             alt="Raïssa - Support Gozem" class="w-full h-[400px] object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-[#00A651] p-6 text-white">
-                            <p class="font-bold text-sm">Aminata A.</p>
+                            <p class="font-medium text-sm">Aminata A.</p>
                             <p class="text-xs opacity-90">Toujours disponible pour vous aider !</p>
                         </div>
                     </div>
@@ -1005,7 +1001,7 @@
                         <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/10/story1.jpg"
                             class="w-10 h-10 rounded-full object-cover border-2 border-green-500">
                         <div class="pr-4">
-                            <p class="text-[10px] font-bold text-gray-400">Marcel D'oliveirra</p>
+                            <p class="text-[10px] font-medium text-gray-400">Marcel D'oliveirra</p>
                             <p class="text-[11px] font-medium dark:text-white">Disponible pour répondre à vos questions
                             </p>
                         </div>
@@ -1016,7 +1012,7 @@
                         <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/10/story3.jpg"
                             class="w-10 h-10 rounded-full object-cover border-2 border-green-500">
                         <div class="pr-4">
-                            <p class="text-[10px] font-bold text-gray-400">Murie Loko</p>
+                            <p class="text-[10px] font-medium text-gray-400">Murie Loko</p>
                             <p class="text-[11px] font-medium dark:text-white">Besoin d'aide ? Je suis là pour vous !
                             </p>
                         </div>
@@ -1025,7 +1021,7 @@
             </div>
 
             <div class="text-center lg:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white leading-tight mb-6">
+                <h2 class="text-3xl md:text-4xl font-medium text-slate-800 dark:text-white leading-tight mb-6">
                     Notre équipe de service clientèle est <span class="text-[#00A651]">disponible 24/7</span>
                 </h2>
 
@@ -1039,7 +1035,7 @@
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center gap-3 bg-[#004d40] hover:bg-[#003d33] text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl active:scale-95 group">
+                    class="inline-flex items-center gap-3 bg-[#004d40] hover:bg-[#003d33] text-white px-10 py-4 rounded-xl font-medium transition-all shadow-xl active:scale-95 group">
                     Contactez-nous
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -1094,7 +1090,7 @@
 
             <div class="relative z-10">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight">Gozem en quelques chiffres
+                    <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight">Gozem en quelques chiffres
                     </h2>
                     <div class="w-20 h-1.5 bg-white/30 mx-auto mt-4 rounded-full"></div>
                 </div>
@@ -1102,8 +1098,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white mb-16">
                     <div class="flex flex-col items-center group">
                         <span
-                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">5</span>
-                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Pays opérationnels
+                            class="text-5xl md:text-6xl font-medium mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">5</span>
+                        <p class="text-xs font-medium uppercase tracking-[0.2em] mb-3 text-green-300">Pays opérationnels
                         </p>
                         <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[200px]">Togo, Bénin, Gabon,
                             Cameroun et Rép. du Congo.</p>
@@ -1111,16 +1107,16 @@
 
                     <div class="flex flex-col items-center group md:border-x md:border-white/10 px-4">
                         <span
-                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">300+</span>
-                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Collaborateurs</p>
+                            class="text-5xl md:text-6xl font-medium mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">300+</span>
+                        <p class="text-xs font-medium uppercase tracking-[0.2em] mb-3 text-green-300">Collaborateurs</p>
                         <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[200px]">Une équipe présente
                             dans 12 villes d'Afrique francophone.</p>
                     </div>
 
                     <div class="flex flex-col items-center group">
                         <span
-                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">20+</span>
-                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Offres / mois</p>
+                            class="text-5xl md:text-6xl font-medium mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">20+</span>
+                        <p class="text-xs font-medium uppercase tracking-[0.2em] mb-3 text-green-300">Offres / mois</p>
                         <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[200px]">Nous recrutons
                             régulièrement pour notre croissance.</p>
                     </div>
@@ -1130,8 +1126,8 @@
                     class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center text-white lg:max-w-3xl lg:mx-auto pt-12 border-t border-white/10">
                     <div class="flex flex-col items-center group">
                         <span
-                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">4</span>
-                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Verticales actives
+                            class="text-5xl md:text-6xl font-medium mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">4</span>
+                        <p class="text-xs font-medium uppercase tracking-[0.2em] mb-3 text-green-300">Verticales actives
                         </p>
                         <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[250px]">Transport,
                             E-commerce, E-banking, Financement.</p>
@@ -1139,8 +1135,8 @@
 
                     <div class="flex flex-col items-center group">
                         <span
-                            class="text-5xl md:text-6xl font-black mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">15</span>
-                        <p class="text-xs font-black uppercase tracking-[0.2em] mb-3 text-green-300">Nationalités</p>
+                            class="text-5xl md:text-6xl font-medium mb-3 text-white tracking-tighter transition-transform group-hover:scale-110">15</span>
+                        <p class="text-xs font-medium uppercase tracking-[0.2em] mb-3 text-green-300">Nationalités</p>
                         <p class="text-[11px] md:text-xs opacity-70 leading-relaxed max-w-[250px]">Nous valorisons la
                             diversité et les talents du continent.</p>
                     </div>
@@ -1153,8 +1149,8 @@
         <div class="max-w-7xl mx-auto px-6">
 
             <div class="text-center mb-20">
-                <p class="text-[#00A651] font-bold text-sm uppercase tracking-widest mb-3">Gozem</p>
-                <h2 class="text-3xl md:text-4xl font-black text-slate-800 dark:text-white">
+                <p class="text-[#00A651] font-medium text-sm uppercase tracking-widest mb-3">Gozem</p>
+                <h2 class="text-3xl md:text-4xl font-medium text-slate-800 dark:text-white">
                     Votre plateforme de service la plus Fiable !
                 </h2>
             </div>
@@ -1165,7 +1161,7 @@
                     <div
                         class="flex flex-col md:flex-row lg:flex-row items-center lg:items-end gap-6 text-center lg:text-right">
                         <div class="order-2 lg:order-1">
-                            <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Sécurité</h3>
+                            <h3 class="text-xl font-medium text-slate-800 dark:text-white mb-2">Sécurité</h3>
                             <p
                                 class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs mx-auto lg:ml-auto">
                                 Nous assurons la sécurité de vos trajets et transactions afin qu'elles aboutissent en
@@ -1185,7 +1181,7 @@
                     <div
                         class="flex flex-col md:flex-row lg:flex-row items-center lg:items-end gap-6 text-center lg:text-right">
                         <div class="order-2 lg:order-1">
-                            <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Rapidité</h3>
+                            <h3 class="text-xl font-medium text-slate-800 dark:text-white mb-2">Rapidité</h3>
                             <p
                                 class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs mx-auto lg:ml-auto">
                                 Grâce à notre large réseau de chauffeurs, nous nous efforçons de vous servir en un temps
@@ -1218,7 +1214,7 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Innovation</h3>
+                        <h3 class="text-xl font-medium text-slate-800 dark:text-white mb-2">Innovation</h3>
                         <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs mx-auto lg:mx-0">
                             Nous innovons constamment pour vous offrir des solutions de paiement et de transport
                             adaptées à vos besoins locaux.
@@ -1253,7 +1249,7 @@
 
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tighter">
+                    <h2 class="text-3xl md:text-4xl font-medium text-slate-900 dark:text-white tracking-tighter">
                         Actualités récentes <span class="text-[#00A651]">.</span>
                     </h2>
                     <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm md:text-base">
@@ -1261,7 +1257,7 @@
                     </p>
                 </div>
                 <a href="#"
-                    class="text-sm font-bold text-slate-900 dark:text-white border-b-2 border-[#00A651] pb-1 hover:text-[#00A651] transition-colors">
+                    class="text-sm font-medium text-slate-900 dark:text-white border-b-2 border-[#00A651] pb-1 hover:text-[#00A651] transition-colors">
                     Voir tout le blog
                 </a>
             </div>
@@ -1271,7 +1267,7 @@
                 <div class="group cursor-pointer">
                     <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
                         <span
-                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-medium px-3 py-1 rounded-full shadow-sm">
                             Lancement
                         </span>
                         <img src="https://images.squarespace-cdn.com/content/v1/665a6f8f14819f41fdb75fac/05c2d13c-1101-46bc-ad2a-dbcf4eb6f9ca/IMG_7690.png"
@@ -1287,11 +1283,11 @@
                             <span>4 min</span>
                         </div>
                         <h3
-                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            class="font-medium text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
                             Lancement imminent de Gozem Money au Togo
                         </h3>
                         <div
-                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            class="flex items-center text-[#00A651] font-medium text-xs group-hover:gap-3 gap-2 transition-all">
                             Lire l'article <i class="fa fa-arrow-right"></i>
                         </div>
                     </div>
@@ -1300,7 +1296,7 @@
                 <div class="group cursor-pointer">
                     <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
                         <span
-                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-medium px-3 py-1 rounded-full shadow-sm">
                             Formation
                         </span>
                         <img src="https://gozem.co/bj/wp-content/uploads/sites/6/2025/07/2.png"
@@ -1316,11 +1312,11 @@
                             <span>5 min</span>
                         </div>
                         <h3
-                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            class="font-medium text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
                             4e cohorte du Graduate Training Program
                         </h3>
                         <div
-                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            class="flex items-center text-[#00A651] font-medium text-xs group-hover:gap-3 gap-2 transition-all">
                             Lire l'article <i class="fa fa-arrow-right"></i>
                         </div>
                     </div>
@@ -1329,7 +1325,7 @@
                 <div class="group cursor-pointer">
                     <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
                         <span
-                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-medium px-3 py-1 rounded-full shadow-sm">
                             Innovation
                         </span>
                         <img src="https://www.togofirst.com/media/k2/items/cache/03160998318f697230a7e611fb0fa87d_L.jpg"
@@ -1345,11 +1341,11 @@
                             <span>3 min</span>
                         </div>
                         <h3
-                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            class="font-medium text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
                             Révolution de la livraison express urbaine
                         </h3>
                         <div
-                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            class="flex items-center text-[#00A651] font-medium text-xs group-hover:gap-3 gap-2 transition-all">
                             Lire l'article <i class="fa fa-arrow-right"></i>
                         </div>
                     </div>
@@ -1358,7 +1354,7 @@
                 <div class="group cursor-pointer">
                     <div class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/3]">
                         <span
-                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+                            class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md text-[#00A651] text-[10px] font-medium px-3 py-1 rounded-full shadow-sm">
                             Finance
                         </span>
                         <img src="https://secretsdelatech.com/wp-content/uploads/2025/08/Gozem-Money-le-portefeuille-numerique-qui-sinstalle-en-silence-1024x683.jpg"
@@ -1374,11 +1370,11 @@
                             <span>6 min</span>
                         </div>
                         <h3
-                            class="font-bold text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
+                            class="font-medium text-slate-900 dark:text-white leading-tight mb-4 group-hover:text-[#00A651] transition-colors line-clamp-2 text-lg">
                             Levée de fonds : 30 millions $ pour l'expansion
                         </h3>
                         <div
-                            class="flex items-center text-[#00A651] font-bold text-xs group-hover:gap-3 gap-2 transition-all">
+                            class="flex items-center text-[#00A651] font-medium text-xs group-hover:gap-3 gap-2 transition-all">
                             Lire l'article <i class="fa fa-arrow-right"></i>
                         </div>
                     </div>
@@ -1388,252 +1384,128 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-50 dark:bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- ========== AVIS CLIENTS ========== -->
+    <section class="py-24 bg-white dark:bg-slate-950">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-medium text-slate-900 dark:text-white tracking-tight">
+                Ce que disent <span class="text-[#00A651]">nos clients</span>
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 mt-3">Leurs retours après un trajet, une livraison ou un paiement avec Gozem.</p>
+            <span class="inline-block mt-4 text-[11px] text-slate-500 bg-gray-100 dark:bg-slate-900 px-3 py-1 rounded-full">Exemples d'avis</span>
 
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div class="max-w-xl">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
-                        Nos clients parlent de nous
-                    </h2>
-                    <p class="text-slate-500 dark:text-slate-400">Découvrez pourquoi des milliers d'utilisateurs font
-                        confiance à Gozem chaque jour.</p>
-                </div>
-
-                <div class="flex gap-3">
-                    <button
-                        class="swiper-prev w-12 h-12 rounded-full border border-gray-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#00A651] hover:text-white transition-all shadow-sm">
-                        <i class="fa fa-chevron-left"></i>
-                    </button>
-                    <button
-                        class="swiper-next w-12 h-12 rounded-full border border-gray-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#00A651] hover:text-white transition-all shadow-sm">
-                        <i class="fa fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div
-                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-800 flex flex-col h-full">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://ui-avatars.com/api/?name=Koffi+A.&background=00A651&color=fff" alt="Avatar"
-                            class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-slate-800 dark:text-white text-sm">Koffi Arnauld</h4>
-                            <p class="text-xs text-gray-400">Togo</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-1 mb-4">
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                    </div>
-
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow">
-                        "Rien d'autre à dire que tout est impeccable. La satisfaction est parfaite pour mes trajets
-                        quotidiens. Vous êtes très opérationnels."
-                    </p>
-
-                    <div class="pt-6 border-t border-gray-50 dark:border-slate-800 flex justify-between items-center">
-                        <span class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Trustpilot</span>
-                        <a href="#"
-                            class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2 hover:text-[#00A651] transition">
-                            Voir l'avis <i class="fa fa-arrow-right text-[10px]"></i>
-                        </a>
+            <!-- Les avis : des petites bulles qui passent à la ligne toutes seules -->
+            <div class="flex flex-wrap justify-center gap-3 mt-10">
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-[#00A651] text-white text-[11px] flex items-center justify-center shrink-0">KA</span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Tout est impeccable. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Koffi A. · Togo <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
                     </div>
                 </div>
-
-                <div
-                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-800 flex flex-col h-full">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="w-12 h-12 bg-[#00A651]/10 rounded-full flex items-center justify-center text-[#00A651] font-bold">
-                            MJ</div>
-                        <div>
-                            <h4 class="font-bold text-slate-800 dark:text-white text-sm">Moussa Jean</h4>
-                            <p class="text-xs text-gray-400">Bénin</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-1 mb-4">
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                    </div>
-
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow">
-                        "3 ans d'utilisation sans problème avec l'application. C'est la fierté de l'Afrique. Gozem
-                        aujourd'hui et pour toujours."
-                    </p>
-
-                    <div class="pt-6 border-t border-gray-50 dark:border-slate-800 flex justify-between items-center">
-                        <span class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Google Play</span>
-                        <a href="#"
-                            class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2 hover:text-[#00A651] transition">
-                            Voir l'avis <i class="fa fa-arrow-right text-[10px]"></i>
-                        </a>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-[#00A651] text-white text-[11px] flex items-center justify-center shrink-0">MJ</span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« 3 ans sans aucun problème. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Moussa J. · Bénin <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
                     </div>
                 </div>
-
-                <div
-                    class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-800 flex flex-col h-full">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://ui-avatars.com/api/?name=Fatou+B.&background=00A651&color=fff" alt="Avatar"
-                            class="w-12 h-12 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-slate-800 dark:text-white text-sm">Fatou Bakary</h4>
-                            <p class="text-xs text-gray-400">Gabon</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-1 mb-4">
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                        <i class="fa fa-star text-yellow-400 text-xs"></i>
-                    </div>
-
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 flex-grow">
-                        "Une assistance parfaite. J'avais une question sur une livraison et le service client m'a
-                        répondu très rapidement. Efficacité totale."
-                    </p>
-
-                    <div class="pt-6 border-t border-gray-50 dark:border-slate-800 flex justify-between items-center">
-                        <span class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">App Store</span>
-                        <a href="#"
-                            class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2 hover:text-[#00A651] transition">
-                            Voir l'avis <i class="fa fa-arrow-right text-[10px]"></i>
-                        </a>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-[#00A651] text-white text-[11px] flex items-center justify-center shrink-0">FB</span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Un service client très rapide. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Fatou B. · Gabon <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
                     </div>
                 </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <button
-                    class="bg-[#00A651] hover:bg-[#008d44] text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg shadow-green-500/20 active:scale-95 flex items-center gap-3 mx-auto">
-                    Donner mon avis <i class="fa fa-plus text-sm"></i>
-                </button>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-green-100 text-[#00A651] text-xs flex items-center justify-center shrink-0"><i class="fa fa-motorcycle"></i></span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Chauffeur arrivé très vite. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Course en moto <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-green-100 text-[#00A651] text-xs flex items-center justify-center shrink-0"><i class="fa fa-cutlery"></i></span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Mon repas est arrivé encore chaud. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Livraison de repas <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star text-slate-300"></i></span></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-green-100 text-[#00A651] text-xs flex items-center justify-center shrink-0"><i class="fa fa-taxi"></i></span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Prix affiché, pas de surprise. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Course en taxi <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-green-100 text-[#00A651] text-xs flex items-center justify-center shrink-0"><i class="fa fa-credit-card"></i></span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Payer avec Gozem Money, c'est simple. »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Paiement <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-100 dark:bg-slate-900 rounded-full pl-1.5 pr-5 py-1.5">
+                    <span class="w-8 h-8 rounded-full bg-green-100 text-[#00A651] text-xs flex items-center justify-center shrink-0"><i class="fa fa-cube"></i></span>
+                    <div class="text-left">
+                        <p class="text-sm font-medium text-slate-900 dark:text-white">« Colis bien livré, merci ! »</p>
+                        <p class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">Envoi de colis <span class="text-yellow-400 text-[10px] tracking-tight"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star text-slate-300"></i></span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#00A651] text-white pt-16">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- ========== FOOTER simple ========== -->
+    <footer class="bg-white dark:bg-slate-950 px-4 md:px-6 pb-4">
+        <div class="max-w-7xl mx-auto bg-gray-100 dark:bg-slate-900 rounded-[2rem] overflow-hidden">
 
-            <div
-                class="flex flex-col lg:flex-row items-center justify-between bg-white/10 rounded-[35px] p-8 md:p-12 mb-16 border border-white/10">
-                <div class="text-center lg:text-left mb-8 lg:mb-0">
-                    <h3 class="text-2xl md:text-3xl font-black mb-2">Prêt à simplifier votre vie ?</h3>
-                    <p class="opacity-80">Téléchargez l'application Gozem dès maintenant.</p>
-                </div>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#" class="transition-transform hover:scale-105">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                            class="h-12 w-auto" alt="Google Play">
-                    </a>
-                    <a href="#" class="transition-transform hover:scale-105">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                            class="h-12 w-auto" alt="App Store">
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-
-                <div class="space-y-6">
-                    <img src="logo-white.png" class="h-10" alt="Gozem">
-                    <p class="text-sm leading-relaxed opacity-80">
-                        Gozem est la super application n° 1 en Afrique qui fournit des services de transport, de
-                        livraison et financiers.
-                    </p>
-                    <p class="text-sm font-bold italic opacity-100">
-                        Faire sourire l'Afrique. 😊
-                    </p>
+            <!-- Colonnes de liens -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 px-8 md:px-12 pt-12 text-sm">
+                <div class="col-span-2">
+                    <p class="text-lg font-medium text-slate-900 dark:text-white">Gozem</p>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1">La super app pour vos trajets, livraisons et paiements.</p>
+                    <p class="text-slate-500 dark:text-slate-400 mt-4">Immeuble Blanc, Route des pêches, Cotonou</p>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-map-marker-alt text-sm"></i> Adresse
-                    </h4>
-                    <p class="text-sm opacity-80 leading-relaxed">
-                        Gozem Bénin, Immeuble Blanc,<br>
-                        Route des pêches, Cotonou.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-headset text-sm"></i> Assistance
-                    </h4>
-                    <ul class="text-sm space-y-4">
-                        <li class="opacity-80">E-mail: <a href="mailto:group@gozem.co"
-                                class="hover:text-white font-medium underline">group@gozem.co</a></li>
-                        <li><a href="#"
-                                class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all inline-block">Une
-                                plainte ? Contactez-nous</a></li>
+                    <p class="font-medium text-slate-900 dark:text-white mb-3">Navigation</p>
+                    <ul class="space-y-2 text-slate-500 dark:text-slate-400">
+                        <li><a href="partner.html" class="hover:text-[#00A651]">Devenir partenaire</a></li>
+                        <li><a href="#services" class="hover:text-[#00A651]">Nos services</a></li>
+                        <li><a href="#" class="hover:text-[#00A651]">Centre d'aide</a></li>
+                        <li><a href="#" class="hover:text-[#00A651]">Blog</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6">Explorer</h4>
-                    <ul class="text-sm space-y-3 opacity-80">
-                        <li><a href="#" class="hover:translate-x-1 hover:opacity-100 transition-all inline-block">Help
-                                Center</a></li>
-                        <li><a href="#"
-                                class="hover:translate-x-1 hover:opacity-100 transition-all inline-block">Rejoignez-nous</a>
-                        </li>
-                        <li><a href="#" class="hover:translate-x-1 hover:opacity-100 transition-all inline-block">Blog
-                                Actualités</a></li>
+                    <p class="font-medium text-slate-900 dark:text-white mb-3">Nos services</p>
+                    <ul class="space-y-2 text-slate-500 dark:text-slate-400">
+                        <li>Transport</li>
+                        <li>Livraison</li>
+                        <li>Paiement</li>
                     </ul>
                 </div>
-            </div>
 
-            <hr class="border-white/10 mb-8">
-
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-12">
-                <div class="flex gap-4">
-                    <a href="#"
-                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00A651] hover:scale-110 transition-transform shadow-lg">
-                        <img src="icones/facebook.png" alt="facebook logo" class="w-4 h-4">
-                    </a>
-                    <a href="#"
-                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00A651] hover:scale-110 transition-transform shadow-lg">
-                        <img src="icones/linkedin.png" alt="linkedin logo" class="w-4 h-4">
-                    </a>
-                    <a href="#"
-                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#00A651] hover:scale-110 transition-transform shadow-lg">
-                        <img src="icones/twitter.png" alt="twitter logo" class="w-4 h-4">
-                    </a>
-                </div>
-
-                <div class="flex gap-3">
-                    <button
-                        class="flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm hover:bg-white/20 transition-all">
-                        <span>🇧🇯</span> Bénin <i class="fas fa-chevron-down text-[10px] opacity-60"></i>
-                    </button>
-                    <button
-                        class="flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm hover:bg-white/20 transition-all">
-                        <i class="fas fa-globe"></i> Français <i class="fas fa-chevron-down text-[10px] opacity-60"></i>
-                    </button>
+                <div class="col-span-2 md:col-span-1">
+                    <a href="#" class="font-medium text-[#00A651] hover:underline">Télécharger l'app</a>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 mb-4">Sur Android et iOS</p>
+                    <p class="font-medium text-slate-900 dark:text-white mb-1">Contact</p>
+                    <a href="mailto:group@gozem.co" class="text-slate-500 dark:text-slate-400 hover:text-[#00A651]">group@gozem.co</a>
                 </div>
             </div>
-        </div>
 
-        <div class="bg-[#008d44] py-6">
-            <div
-                class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] opacity-70">
-                <p>© Copyright Gozem 2026. Tous droits réservés.</p>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
-                    <a href="#" class="hover:text-white transition-colors">CGU</a>
-                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+            <!-- Grand mot "gozem" coupé en bas -->
+            <div class="overflow-hidden h-[12.4vw] xl:h-[10rem] mt-12" aria-hidden="true">
+                <p class="text-[31vw] xl:text-[25rem] leading-none -mt-[7.4vw] xl:-mt-[6rem] font-medium tracking-tighter text-slate-900 dark:text-white text-center select-none">gozem</p>
+            </div>
+
+            <!-- Barre du bas -->
+            <div class="flex flex-wrap justify-between gap-4 px-8 md:px-12 py-5 text-xs text-slate-500 dark:text-slate-400">
+                <p>© 2026 Gozem. Tous droits réservés.</p>
+                <div class="flex gap-5">
+                    <a href="#" class="hover:text-[#00A651]">Confidentialité</a>
+                    <a href="#" class="hover:text-[#00A651]">CGU</a>
+                    <a href="#" class="hover:text-[#00A651]">Retour en haut ↑</a>
                 </div>
             </div>
         </div>
