@@ -7,7 +7,8 @@
     <title>Refonte Gozem</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -23,18 +24,20 @@
 
     html {
         scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
     }
 </style>
 
 <body class="bg-white dark:bg-gray-800">
 
     <header x-data="{ mobileMenuOpen: false }"
-        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 transition-all duration-300">
+        class="fixed top-4 inset-x-0 z-50 px-4 md:px-6">
 
-        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+        <!-- Barre blanche arrondie qui flotte au-dessus du hero -->
+        <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex justify-between items-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-full shadow-lg">
 
             <div class="flex-shrink-0">
-                <a href="index.html" class="text-xl md:text-2xl font-black text-[#00A651] dark:text-white tracking-tighter">
+                <a href="index.html" class="logo text-xl md:text-2xl font-extrabold text-[#00A651] dark:text-white tracking-tight">
                     GOZEM
                 </a>
             </div>
@@ -49,7 +52,7 @@
 
                 <div class="relative group">
                     <button
-                        class="flex items-center gap-1 text-[14px] font-normal text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition py-8">
+                        class="flex items-center gap-1 text-[14px] font-normal text-gray-700 dark:text-slate-200 group-hover:text-[#00A651] transition py-5">
                         Nous Rejoindre ?
                         <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
@@ -130,6 +133,11 @@
                     </div>
                 </div>
 
+                <a href="#" class="hidden md:inline-flex items-center gap-2 bg-slate-900 hover:bg-[#00A651] text-white text-xs font-semibold pl-4 pr-1.5 py-1.5 rounded-full transition">
+                    Télécharger l'app
+                    <span class="w-7 h-7 bg-[#00A651] rounded-full flex items-center justify-center"><i class="fa fa-arrow-right"></i></span>
+                </a>
+
                 <button @click="mobileMenuOpen = !mobileMenuOpen"
                     class="lg:hidden p-2.5 text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
                     <svg x-show="!mobileMenuOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +157,7 @@
             x-transition:enter-start="opacity-0 -translate-y-10" x-transition:enter-end="opacity-100 translate-y-0"
             x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
             x-transition:leave-end="opacity-0 -translate-y-10"
-            class="lg:hidden fixed inset-x-0 top-20 bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800 shadow-2xl z-40 max-h-[calc(100vh-80px)] overflow-y-auto px-6 py-8">
+            class="lg:hidden fixed inset-x-4 top-24 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl z-40 max-h-[calc(100vh-112px)] overflow-y-auto px-6 py-8">
 
             <div class="flex flex-col space-y-6">
                 <a href="partner.html" class="text-xl font-black text-gray-900 dark:text-white">Devenir Partenaire</a>
@@ -205,75 +213,182 @@
         }
     </style>
 
-    <section class="relative w-full min-h-[67px] flex items-center bg-white dark:bg-slate-950 py-12 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
+    <!-- ========== HERO : 3 slides qui changent toutes les 5 secondes ========== -->
+    <section class="hero relative overflow-hidden bg-white dark:bg-slate-950">
 
-            <div class="z-10 text-center lg:text-left">
-                <h1
-                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-800 dark:text-white leading-tight mb-6">
-                    <span class="text-[#00A651]">GOZEM</span> <br class="hidden md:block"> Simplifie votre quotidien
-                </h1>
+        <!-- Les 3 slides sont superposées dans la même case de la grille -->
+        <div class="grid">
+        <!-- Slide 1 -->
+        <div class="hero-slide col-start-1 row-start-1 relative flex flex-col transition-opacity duration-700">
 
-                <p class="text-lg text-slate-500 dark:text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    Gozem est la solution simple et sécurisée pour commander un trajet,
-                    se faire livrer des repas et gérer vos paiements partout en Afrique.
-                </p>
-
-                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                    <a href="#"
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-full font-bold transition-all shadow-lg shadow-blue-500/25 active:scale-95 text-sm">
-                        Créer un compte passager
+            <!-- Texte -->
+            <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-32 pb-8 lg:pt-44 lg:pb-32">
+                <div class="max-w-xl">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
+                        Votre trajet,<br>en quelques<br>
+                        <span class="text-[#00A651]">clics.</span>
+                    </h1>
+                    <p class="text-slate-600 dark:text-slate-300 max-w-sm mb-8">
+                        Moto, taxi ou tricycle : commandez une course, voyez le prix avant de partir et suivez votre chauffeur en temps réel.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg transition">
+                        <i class="fa fa-play text-[#00A651]"></i> Télécharger l'app
                     </a>
-                    <a href="#"
-                        class="bg-[#00A651] hover:bg-[#008d44] text-white px-8 py-3.5 rounded-full font-bold transition-all shadow-lg shadow-green-500/25 active:scale-95 text-sm">
-                        Devenir conducteur
-                    </a>
-                </div>
-            </div>
-
-            <div class="relative flex justify-center items-center">
-                <div class="absolute w-[120%] h-[120%] bg-slate-50 dark:bg-slate-900/50 rounded-full -z-10"></div>
-
-                <div class="relative">
-                    <div
-                        class="w-[320px] md:w-[480px] lg:w-[550px] relative z-20 drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-transform duration-700 hover:scale-105">
-                        <img src="images/carte.png" alt="Gozem Delivery" class="w-full h-auto object-contain">
-                    </div>
-
-                    <div
-                        class="absolute -right-4 md:-right-8 top-10 z-30 bg-white dark:bg-slate-800 p-4 md:p-5 rounded-[2rem] shadow-2xl border border-gray-50 dark:border-slate-700 animate-bounce-slow">
-                        <div class="flex flex-col items-center gap-2">
-                            <div
-                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-[#00A651]">
-                                <i class="fa fa-check-circle text-2xl"></i>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-[10px] font-black text-slate-700 dark:text-white leading-none">Course
-                                    terminée</p>
-                                <p class="text-[10px] text-gray-400 mt-1">Paiement validé</p>
-                            </div>
+                    <div class="flex gap-10 mt-12">
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Moto & Auto</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Selon votre besoin</p>
                         </div>
-                    </div>
-
-                    <div
-                        class="absolute -left-8 md:-left-16 bottom-20 z-30 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-gray-50 dark:border-slate-700">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
-                                <i class="fa fa-map-marker text-lg"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-[10px] font-bold dark:text-white uppercase tracking-wider">Arrivée dans
-                                </p>
-                                <p class="text-[16px] font-black text-[#00A651]">3 min</p>
-                            </div>
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Prix affiché</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Avant de commander</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Suivi live</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Trajet partageable</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Image : sous le texte sur mobile, en fond sur grand écran -->
+            <img src="images/phone.jpg" alt="" class="w-full h-72 object-cover object-center lg:absolute lg:inset-0 lg:h-full">
+
+            <!-- Léger voile blanc derrière le texte seulement (à gauche) -->
+            <div class="hidden lg:block absolute inset-0 bg-linear-to-r from-white/75 via-white/40 via-35% to-transparent to-55% dark:from-slate-950/75 dark:via-slate-950/40"></div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide col-start-1 row-start-1 relative flex flex-col transition-opacity duration-700 opacity-0 invisible">
+
+            <!-- Texte -->
+            <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-32 pb-8 lg:pt-44 lg:pb-32">
+                <div class="max-w-xl">
+                    <h2 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
+                        <span class="lg:whitespace-nowrap">Repas, courses, colis,</span><br>
+                        <span class="text-[#00A651] lg:whitespace-nowrap">livrés maintenant.</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 max-w-sm mb-8">
+                        Vos restaurants préférés, le supermarché du quartier ou un colis urgent : un livreur Gozem s'en occupe.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg transition">
+                        <i class="fa fa-play text-[#00A651]"></i> Télécharger l'app
+                    </a>
+                    <div class="flex gap-10 mt-12">
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Restaurants</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Plats locaux</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Courses</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Supermarchés</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Colis</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Envoyés en ville</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image : sous le texte sur mobile, en fond sur grand écran -->
+            <img src="images/carriere_barner.png" alt="" class="w-full h-72 object-cover object-right lg:absolute lg:inset-0 lg:h-full">
+
+            <!-- Léger voile blanc derrière le texte seulement (à gauche) -->
+            <div class="hidden lg:block absolute inset-0 bg-linear-to-r from-white/75 via-white/40 via-35% to-transparent to-55% dark:from-slate-950/75 dark:via-slate-950/40"></div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide col-start-1 row-start-1 relative flex flex-col transition-opacity duration-700 opacity-0 invisible">
+
+            <!-- Texte -->
+            <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-32 pb-8 lg:pt-44 lg:pb-32">
+                <div class="max-w-xl">
+                    <h2 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-6">
+                        Payez, envoyez,<br>rechargez,<br>
+                        <span class="text-[#00A651]">en toute sécurité.</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 max-w-sm mb-8">
+                        Avec Gozem Money, réglez vos courses, envoyez de l'argent à vos proches et rechargez votre crédit en un geste.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-[#00A651] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg transition">
+                        <i class="fa fa-play text-[#00A651]"></i> Télécharger l'app
+                    </a>
+                    <div class="flex gap-10 mt-12">
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Gozem Money</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Votre portefeuille</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">À votre façon</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Mobile Money & cash</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900 dark:text-white">Recharges</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Crédit & factures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image : sous le texte sur mobile, en fond sur grand écran -->
+            <img src="images/10172881.jpg" alt="" class="w-full h-72 object-cover object-right lg:absolute lg:inset-0 lg:h-full">
+
+            <!-- Léger voile blanc derrière le texte seulement (à gauche) -->
+            <div class="hidden lg:block absolute inset-0 bg-linear-to-r from-white/75 via-white/40 via-35% to-transparent to-55% dark:from-slate-950/75 dark:via-slate-950/40"></div>
+        </div>
+        </div>
+
+        <!-- Les 3 points pour changer de slide -->
+        <div class="absolute bottom-6 inset-x-0 z-20">
+            <div class="max-w-7xl mx-auto px-6 flex justify-center lg:justify-start gap-2">
+                <button class="hero-dot h-2 w-8 rounded-full bg-[#00A651] transition-all" aria-label="Slide 1"></button>
+                <button class="hero-dot h-2 w-2 rounded-full bg-slate-300 transition-all" aria-label="Slide 2"></button>
+                <button class="hero-dot h-2 w-2 rounded-full bg-slate-300 transition-all" aria-label="Slide 3"></button>
+            </div>
         </div>
     </section>
+
+    <!-- Police du hero et du logo (comme la maquette) -->
+    <style>
+        .hero,
+        .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+
+    <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        let current = 0;
+
+        // Affiche la slide numéro n et cache l'ancienne
+        function showSlide(n) {
+            slides[current].classList.add('opacity-0', 'invisible');
+            dots[current].classList.replace('w-8', 'w-2');
+            dots[current].classList.replace('bg-[#00A651]', 'bg-slate-300');
+
+            current = n;
+
+            slides[current].classList.remove('opacity-0', 'invisible');
+            dots[current].classList.replace('w-2', 'w-8');
+            dots[current].classList.replace('bg-slate-300', 'bg-[#00A651]');
+        }
+
+        // Passe à la slide suivante (après la 3e, on revient à la 1re)
+        function nextSlide() {
+            showSlide((current + 1) % slides.length);
+        }
+
+        let timer = setInterval(nextSlide, 5000);
+
+        // Clic sur un point : on va à cette slide et on relance le minuteur
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+                clearInterval(timer);
+                timer = setInterval(nextSlide, 5000);
+            });
+        });
+    </script>
 
     <style>
         @keyframes bounce-slow {
@@ -1525,7 +1640,7 @@
     </footer>
 
     <script>
-
+        function switchTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
 
             document.querySelectorAll('.tab-btn').forEach(btn => {
