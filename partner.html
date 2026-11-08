@@ -7,8 +7,7 @@
     <title>Refonte Gozem</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -20,19 +19,24 @@
 
 <style>
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Pas de texte plus gras que 500 sur tout le site */
+    b, strong, h1, h2, h3, h4, h5, h6, th {
+        font-weight: 500;
     }
 </style>
 
 <body class="bg-white dark:bg-gray-800">
 
     <header x-data="{ mobileMenuOpen: false }"
-        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 font-['Poppins'] transition-all duration-300">
+        class="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-gray-100 dark:border-slate-800 transition-all duration-300">
 
         <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
 
             <div class="flex-shrink-0">
-                <a href="/" class="text-xl md:text-2xl font-black text-[#00A651] dark:text-white tracking-tighter">
+                <a href="/" class="text-xl md:text-2xl font-medium text-[#00A651] dark:text-white tracking-tighter">
                     GOZEM
                 </a>
             </div>
@@ -60,7 +64,7 @@
                         <a href="carriere.html"
                             class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Carrières</a>
                         <a href="offres.html"
-                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-bold text-[#00A651]">Offres
+                            class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition font-medium text-[#00A651]">Offres
                             d'emplois</a>
                         <a href="metiers.html"
                             class="block px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-slate-800 rounded-xl transition">Métiers
@@ -92,7 +96,7 @@
                     <div
                         class="absolute right-0 w-32 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-1 z-[70] p-1.5 overflow-hidden">
                         <a href="#"
-                            class="flex items-center justify-between px-3 py-2 text-[13px] font-semibold text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg">English
+                            class="flex items-center justify-between px-3 py-2 text-[13px] font-medium text-gray-600 dark:text-slate-300 hover:bg-green-50 dark:hover:bg-[#00A651]/10 rounded-lg">English
                             <span class="text-[10px] opacity-40">EN</span></a>
                     </div>
                 </div>
@@ -109,7 +113,7 @@
                     <button
                         class="flex items-center space-x-1.5 bg-gray-50 dark:bg-slate-900 px-3 py-2 rounded-xl border border-transparent hover:border-[#00A651] transition-all">
                         <img src="icones/world-flag.png" alt="Bénin" class="w-5 h-auto rounded-sm">
-                        <span class="text-[11px] font-bold dark:text-white">Bénin</span>
+                        <span class="text-[11px] font-medium dark:text-white">Bénin</span>
                         <svg class="w-2.5 h-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -151,14 +155,14 @@
             class="lg:hidden fixed inset-x-0 top-20 bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800 shadow-2xl z-40 max-h-[calc(100vh-80px)] overflow-y-auto px-6 py-8">
 
             <div class="flex flex-col space-y-6">
-                <a href="partner.html" class="text-xl font-black text-gray-900 dark:text-white">Devenir Partenaire</a>
-                <a href="#services" class="text-xl font-black text-gray-900 dark:text-white">Nos Services</a>
+                <a href="partner.html" class="text-xl font-medium text-gray-900 dark:text-white">Devenir Partenaire</a>
+                <a href="#services" class="text-xl font-medium text-gray-900 dark:text-white">Nos Services</a>
 
                 <div class="space-y-4 pt-4 border-t border-gray-100 dark:border-slate-800">
-                    <p class="text-[10px] font-black text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
+                    <p class="text-[10px] font-medium text-[#00A651] uppercase tracking-[0.2em]">Nous rejoindre</p>
                     <div class="grid grid-cols-1 gap-4">
                         <a href="carriere.html" class="text-gray-600 dark:text-slate-400 font-medium">Carrières</a>
-                        <a href="offres.html" class="text-[#00A651] font-bold">Offres d'emplois</a>
+                        <a href="offres.html" class="text-[#00A651] font-medium">Offres d'emplois</a>
                         <a href="metiers.html" class="text-gray-600 dark:text-slate-400 font-medium">Métiers &
                             Départements</a>
                         <a href="programmes.html" class="text-gray-500 dark:text-slate-500 italic text-sm">Programmes
@@ -167,13 +171,13 @@
                 </div>
 
                 <div class="pt-6 border-t border-gray-100 dark:border-slate-800 flex flex-wrap gap-4">
-                    <a href="#" class="text-sm font-bold text-gray-600 dark:text-slate-400">Français (FR)</a>
-                    <a href="#" class="text-sm font-bold text-gray-600 dark:text-slate-400">Bénin</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 dark:text-slate-400">Français (FR)</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 dark:text-slate-400">Bénin</a>
                 </div>
 
                 <div class="pt-6 border-t border-gray-100 dark:border-slate-800">
                     <a href="#"
-                        class="flex items-center justify-between text-lg font-bold text-gray-800 dark:text-white">
+                        class="flex items-center justify-between text-lg font-medium text-gray-800 dark:text-white">
                         Centre d'aide
                         <svg class="w-5 h-5 opacity-40" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -186,18 +190,18 @@
         </div> -->
     </header>
 
-    <section class="relative py-20 lg:py-32 overflow-hidden bg-white dark:bg-slate-950 font-['Poppins']">
+    <section class="relative py-20 lg:py-32 overflow-hidden bg-white dark:bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-16">
 
                 <div class="w-full lg:w-1/2 space-y-8">
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00A651]/10 text-[#00A651] text-xs font-bold uppercase tracking-widest">
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00A651]/10 text-[#00A651] text-xs font-medium uppercase tracking-widest">
                         Partenariat Gozem
                     </div>
 
                     <h1
-                        class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
+                        class="text-4xl md:text-6xl font-medium text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
                         Développez vos revenus avec la <span class="text-[#00A651]">Super App</span>.
                     </h1>
 
@@ -208,27 +212,27 @@
 
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="#"
-                            class="px-10 py-4 bg-[#00A651] text-white font-bold rounded-2xl hover:bg-[#008d44] transition-all shadow-xl shadow-green-500/20">
+                            class="px-10 py-4 bg-[#00A651] text-white font-medium rounded-2xl hover:bg-[#008d44] transition-all shadow-xl shadow-green-500/20">
                             Devenir partenaire
                         </a>
                         <a href="#"
-                            class="px-10 py-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white font-bold rounded-2xl hover:bg-slate-200 transition-all">
+                            class="px-10 py-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white font-medium rounded-2xl hover:bg-slate-200 transition-all">
                             Nos solutions
                         </a>
                     </div>
 
                     <div class="pt-10 grid grid-cols-3 gap-8 border-t border-slate-100 dark:border-slate-800">
                         <div>
-                            <p class="text-2xl font-black text-slate-900 dark:text-white">160K</p>
-                            <p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Partenaires</p>
+                            <p class="text-2xl font-medium text-slate-900 dark:text-white">160K</p>
+                            <p class="text-[10px] text-gray-400 uppercase font-medium tracking-widest">Partenaires</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-slate-900 dark:text-white">5</p>
-                            <p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Pays</p>
+                            <p class="text-2xl font-medium text-slate-900 dark:text-white">5</p>
+                            <p class="text-[10px] text-gray-400 uppercase font-medium tracking-widest">Pays</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-slate-900 dark:text-white">1M+</p>
-                            <p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Clients</p>
+                            <p class="text-2xl font-medium text-slate-900 dark:text-white">1M+</p>
+                            <p class="text-[10px] text-gray-400 uppercase font-medium tracking-widest">Clients</p>
                         </div>
                     </div>
                 </div>
@@ -249,8 +253,8 @@
                                     <i class="fa fa-briefcase text-xl"></i>
                                 </div>
                                 <div>
-                                    <p class="text-[10px] font-bold text-gray-400 uppercase">Statut</p>
-                                    <p class="text-sm font-black text-slate-900 dark:text-white">Partenaire Vérifié</p>
+                                    <p class="text-[10px] font-medium text-gray-400 uppercase">Statut</p>
+                                    <p class="text-sm font-medium text-slate-900 dark:text-white">Partenaire Vérifié</p>
                                 </div>
                             </div>
                         </div>
@@ -258,8 +262,8 @@
                         <div
                             class="absolute -bottom-6 -right-6 z-20 bg-[#00A651] p-6 rounded-[2rem] shadow-2xl text-white">
                             <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-black">100%</p>
-                                <p class="text-[10px] font-bold uppercase opacity-80 tracking-tighter">Digitalisé &
+                                <p class="text-2xl font-medium">100%</p>
+                                <p class="text-[10px] font-medium uppercase opacity-80 tracking-tighter">Digitalisé &
                                     Sécurisé</p>
                             </div>
                         </div>
@@ -270,7 +274,7 @@
         </div>
     </section>
 
-    <!-- <section class="relative min-h-screen flex items-center pt-20 bg-slate-900 font-['Poppins']">
+    <!-- <section class="relative min-h-screen flex items-center pt-20 bg-slate-900">
 
         <div class="absolute inset-0 z-0">
             <img src="https://techs.tg/wp-content/uploads/2025/02/GOZEM-1.jpg"
@@ -286,17 +290,17 @@
                         class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
                         <img src="https://togotech.tg/wp-content/uploads/2025/10/Rectangle-24.png" class="h-5"
                             alt="Gozem Partner">
-                        <span class="text-xs font-bold uppercase tracking-widest">Gozem Partner</span>
+                        <span class="text-xs font-medium uppercase tracking-widest">Gozem Partner</span>
                     </div>
 
-                    <h1 class="text-5xl md:text-7xl font-black mb-8 leading-[1.1]">
+                    <h1 class="text-5xl md:text-7xl font-medium mb-8 leading-[1.1]">
                         Devenez <br>
                         <span class="text-[#00A651]">Partenaire</span> de Gozem
                     </h1>
 
-                    <p class="text-xl opacity-90 max-w-xl mb-10 leading-relaxed font-light">
+                    <p class="text-xl opacity-90 max-w-xl mb-10 leading-relaxed font-normal">
                         Rejoignez la Super App N°1 en Afrique comme <span
-                            class="font-bold text-white underline decoration-[#00A651]">12 000 autres partenaires</span>
+                            class="font-medium text-white underline decoration-[#00A651]">12 000 autres partenaires</span>
                         et augmentez vos revenus dès aujourd'hui.
                     </p>
 
@@ -318,7 +322,7 @@
 
                 <div class="w-full lg:w-[450px]">
                     <div class="bg-white rounded-[2rem] p-8 md:p-10 shadow-2xl animate-fade-in-up">
-                        <h2 class="text-3xl font-black text-slate-900 mb-8">Rejoignez-nous</h2>
+                        <h2 class="text-3xl font-medium text-slate-900 mb-8">Rejoignez-nous</h2>
 
                         <form action="#" class="space-y-4">
                             <div>
@@ -344,7 +348,7 @@
                             <div class="flex gap-2">
                                 <div class="flex items-center gap-2 px-3 bg-gray-50 border border-gray-100 rounded-xl">
                                     <span class="text-lg">🇧🇯</span>
-                                    <span class="text-sm font-bold text-slate-500">+229</span>
+                                    <span class="text-sm font-medium text-slate-500">+229</span>
                                 </div>
                                 <input type="tel" placeholder="90 01 12 34"
                                     class="flex-1 px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00A651]/50">
@@ -373,7 +377,7 @@
                             </p>
 
                             <button type="submit"
-                                class="w-full py-4 bg-[#00A651] text-white font-black rounded-xl hover:bg-[#008d44] transition-all shadow-lg shadow-green-500/30 uppercase tracking-widest text-sm">
+                                class="w-full py-4 bg-[#00A651] text-white font-medium rounded-xl hover:bg-[#008d44] transition-all shadow-lg shadow-green-500/30 uppercase tracking-widest text-sm">
                                 Envoyer
                             </button>
                         </form>
@@ -384,41 +388,41 @@
         </div>
     </section> -->
 
-    <section class="py-16 bg-white font-['Poppins']">
+    <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-6">
 
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-slate-900 mt-12 mb-12">
+            <h2 class="text-4xl md:text-5xl font-medium text-center text-slate-900 mt-12 mb-12">
                 Collaborez avec Gozem
             </h2>
 
             <div class="flex overflow-x-auto pb-4 justify-start md:justify-center gap-3 no-scrollbar mb-12">
 
                 <button onclick="tabPartner('freelance', this)"
-                    class="tab-btn active flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-slate-900 border-slate-900 text-white shadow-lg scale-105">
+                    class="tab-btn active flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-slate-900 border-slate-900 text-white shadow-lg scale-105">
                     <img src="icones/freelancer.png" class="w-5 h-5 object-contain brightness-0 invert" alt="">
                     Freelance
                 </button>
 
                 <button onclick="tabPartner('commerce', this)"
-                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
+                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
                     <img src="icones/store.png" class="w-5 h-5 object-contain opacity-70" alt="">
                     Commerce
                 </button>
 
                 <button onclick="tabPartner('mobilite', this)"
-                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
+                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
                     <img src="icones/van.png" class="w-5 h-5 object-contain opacity-70" alt="">
                     Mobilité Pro
                 </button>
 
                 <button onclick="tabPartner('coursier', this)"
-                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
+                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
                     <img src="icones/fast-delivery.png" class="w-5 h-5 object-contain opacity-70" alt="">
                     Coursier
                 </button>
 
                 <button onclick="tabPartner('flotte', this)"
-                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
+                    class="tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700">
                     <img src="icones/businessman.png" class="w-5 h-5 object-contain opacity-70" alt="">
                     Flotte
                 </button>
@@ -427,28 +431,28 @@
             <div class="bg-[#F8F9FA] rounded-[2.5rem] p-10 md:p-16">
 
                 <div id="freelance" class="partner-panel block animate-fadeIn">
-                    <h3 class="text-3xl font-bold mb-10">Devenez freelance</h3>
+                    <h3 class="text-3xl font-medium mb-10">Devenez freelance</h3>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 h-full">
                             <span
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-6 text-sm">1</span>
-                            <h4 class="font-bold text-lg mb-3">Vous êtes étudiant, motivé et passionné par le digital ?
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-6 text-sm">1</span>
+                            <h4 class="font-medium text-lg mb-3">Vous êtes étudiant, motivé et passionné par le digital ?
                             </h4>
                             <p class="text-gray-500 text-sm leading-relaxed">Gagnez de l'argent en recrutant de nouveaux
                                 clients pour Gozem</p>
                         </div>
                         <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 h-full">
                             <span
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-6 text-sm">2</span>
-                            <h4 class="font-bold text-lg mb-3">Vous aimez partager vos bons plans ?</h4>
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-6 text-sm">2</span>
+                            <h4 class="font-medium text-lg mb-3">Vous aimez partager vos bons plans ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">Recommandez Gozem à vos collègues au bureau
                                 et gagnez de l'argent en le faisant</p>
                         </div>
                         <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 h-full">
                             <span
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-6 text-sm">3</span>
-                            <h4 class="font-bold text-lg mb-3">Vous êtes jeune diplômé ?</h4>
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-6 text-sm">3</span>
+                            <h4 class="font-medium text-lg mb-3">Vous êtes jeune diplômé ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">Gagnez de l'argent en développant vos
                                 compétences en vente</p>
                         </div>
@@ -457,7 +461,7 @@
                     <hr class="my-16 border-gray-200">
 
                     <div class="animate-fadeIn">
-                        <h3 class="text-3xl font-bold mb-10">Profitez des avantages Gozem</h3>
+                        <h3 class="text-3xl font-medium mb-10">Profitez des avantages Gozem</h3>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div class="group">
@@ -466,7 +470,7 @@
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         alt="Recommandez Gozem">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3">Recommandez Gozem</h4>
+                                <h4 class="text-xl font-medium mb-3">Recommandez Gozem</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Recommandez et installez Gozem à vos proches et à tout votre entourage.
                                 </p>
@@ -478,7 +482,7 @@
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         alt="Augmentez vos revenus">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3">Augmentez vos revenus</h4>
+                                <h4 class="text-xl font-medium mb-3">Augmentez vos revenus</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Multipliez vos gains lorsqu'une de vos recrues effectue une opération via
                                     l'application Gozem.
@@ -491,7 +495,7 @@
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         alt="Réduisez vos efforts">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3">Réduisez vos efforts</h4>
+                                <h4 class="text-xl font-medium mb-3">Réduisez vos efforts</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Travaillez de n'importe où et fructifiez vos efforts en utilisant uniquement votre
                                     smartphone.
@@ -505,7 +509,7 @@
                 <div id="commerce" class="partner-panel hidden animate-fadeIn space-y-12">
 
                     <div class="mb-10">
-                        <h3 class="text-3xl font-black text-slate-900">Devenez marchand</h3>
+                        <h3 class="text-3xl font-medium text-slate-900">Devenez marchand</h3>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -513,9 +517,9 @@
                         <div
                             class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-50 flex flex-col h-full">
                             <div
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-8 text-sm">
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-8 text-sm">
                                 1</div>
-                            <h4 class="font-black text-xl mb-4 text-slate-900">Vous êtes un restaurant connu de la place
+                            <h4 class="font-medium text-xl mb-4 text-slate-900">Vous êtes un restaurant connu de la place
                                 ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">
                                 Vendez vos bons plats à des milliers de clients sur notre plateforme.
@@ -525,9 +529,9 @@
                         <div
                             class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-50 flex flex-col h-full">
                             <div
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-8 text-sm">
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-8 text-sm">
                                 2</div>
-                            <h4 class="font-black text-xl mb-4 text-slate-900">Vous avez un commerce en ligne de
+                            <h4 class="font-medium text-xl mb-4 text-slate-900">Vous avez un commerce en ligne de
                                 produits locaux ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">
                                 Vendez et faites livrer vos produits via notre application.
@@ -537,9 +541,9 @@
                         <div
                             class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col h-full">
                             <div
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-8 text-sm">
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-8 text-sm">
                                 3</div>
-                            <h4 class="font-black text-xl mb-4 text-slate-900">Vous cherchez à augmenter votre notoriété
+                            <h4 class="font-medium text-xl mb-4 text-slate-900">Vous cherchez à augmenter votre notoriété
                                 ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">
                                 Notre plateforme est la solution idéale pour promouvoir vos produits.
@@ -550,7 +554,7 @@
 
                     <div class="mt-12 text-center">
                         <button
-                            class="bg-[#00A651] text-white px-10 py-4 rounded-full font-black uppercase text-sm tracking-widest shadow-lg hover:bg-slate-900 transition-all">
+                            class="bg-[#00A651] text-white px-10 py-4 rounded-full font-medium uppercase text-sm tracking-widest shadow-lg hover:bg-slate-900 transition-all">
                             Inscrire ma boutique
                         </button>
                     </div>
@@ -558,7 +562,7 @@
                     <hr class="my-16 border-gray-200">
 
                     <div class="animate-fadeIn">
-                        <h3 class="text-3xl font-bold mb-10">Profitez des avantages Gozem</h3>
+                        <h3 class="text-3xl font-medium mb-10">Profitez des avantages Gozem</h3>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div class="group">
@@ -567,7 +571,7 @@
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         alt="Croissance">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3">La livraison comme vecteur de croissance</h4>
+                                <h4 class="text-xl font-medium mb-3">La livraison comme vecteur de croissance</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Notre application Marchand permet de réceptionner et traiter les commandes en temps
                                     réel pour satisfaire plus de clients.
@@ -580,7 +584,7 @@
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         alt="Efficacité">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3">Devenez plus efficace</h4>
+                                <h4 class="text-xl font-medium mb-3">Devenez plus efficace</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Bénéficiez de notre expérience et d'un coaching personnalisé basé sur vos
                                     performances pour optimiser vos ventes.
@@ -593,7 +597,7 @@
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         alt="Marketing">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3">Bénéficiez du marketing intégré</h4>
+                                <h4 class="text-xl font-medium mb-3">Bénéficiez du marketing intégré</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Participez aux campagnes promotionnelles de Gozem et profitez d'une visibilité
                                     massive auprès de notre communauté.
@@ -606,7 +610,7 @@
                 <div id="mobilite" class="partner-panel hidden animate-fadeIn space-y-12">
 
                     <div class="mb-10">
-                        <h3 class="text-3xl font-black text-slate-900 leading-tight">
+                        <h3 class="text-3xl font-medium text-slate-900 leading-tight">
                             La gestion des déplacements professionnels
                         </h3>
                     </div>
@@ -616,9 +620,9 @@
                         <div
                             class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-50 flex flex-col h-full">
                             <div
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-8 text-sm">
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-8 text-sm">
                                 1</div>
-                            <h4 class="font-bold text-lg mb-4 text-slate-900">Vos collaborateurs doivent se déplacer
+                            <h4 class="font-medium text-lg mb-4 text-slate-900">Vos collaborateurs doivent se déplacer
                                 pour vos opérations ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">
                                 Gozem fournit une traçabilité sur les trajets et les dépenses de votre équipe.
@@ -628,9 +632,9 @@
                         <div
                             class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-50 flex flex-col h-full">
                             <div
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-8 text-sm">
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-8 text-sm">
                                 2</div>
-                            <h4 class="font-bold text-lg mb-4 text-slate-900">Vous êtes ouverts tard le soir ?</h4>
+                            <h4 class="font-medium text-lg mb-4 text-slate-900">Vous êtes ouverts tard le soir ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">
                                 Adoptez Gozem pour que vos collaborateurs puissent rentrer en toute sécurité chez eux
                             </p>
@@ -639,9 +643,9 @@
                         <div
                             class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-50 flex flex-col h-full">
                             <div
-                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold mb-8 text-sm">
+                                class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-medium mb-8 text-sm">
                                 3</div>
-                            <h4 class="font-bold text-lg mb-4 text-slate-900">Vous êtes une entreprise avec un effectif
+                            <h4 class="font-medium text-lg mb-4 text-slate-900">Vous êtes une entreprise avec un effectif
                                 réduit ?</h4>
                             <p class="text-gray-500 text-sm leading-relaxed">
                                 Plus besoin d'investir dans l'acquisition d'une flotte de véhicules. Gozem vous donne
@@ -654,7 +658,7 @@
                     <hr class="my-16 border-gray-200">
 
                     <div class="animate-fadeIn">
-                        <h3 class="text-3xl font-bold mb-10">Profitez des avantages Gozem</h3>
+                        <h3 class="text-3xl font-medium mb-10">Profitez des avantages Gozem</h3>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div class="group">
@@ -663,7 +667,7 @@
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         alt="Gestion des collaborateurs">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3 text-slate-900">Gérez le déplacement des
+                                <h4 class="text-xl font-medium mb-3 text-slate-900">Gérez le déplacement des
                                     collaborateurs</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     La gestion des déplacements des équipes ne sera plus une corvée pour vous. Créez des
@@ -677,7 +681,7 @@
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         alt="Rapports personnalisés">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3 text-slate-900">Gagnez en temps avec des rapports
+                                <h4 class="text-xl font-medium mb-3 text-slate-900">Gagnez en temps avec des rapports
                                     personnalisés</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     La gestion budgétaire des déplacements par individu ou par équipe est facilitée
@@ -691,7 +695,7 @@
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         alt="Tracking et paiements">
                                 </div>
-                                <h4 class="text-xl font-bold mb-3 text-slate-900">Profitez du tracking et des paiements
+                                <h4 class="text-xl font-medium mb-3 text-slate-900">Profitez du tracking et des paiements
                                     centralisés</h4>
                                 <p class="text-gray-500 text-sm leading-relaxed">
                                     Payez les déplacements de vos équipes à partir d'un compte unique et suivez
@@ -707,7 +711,7 @@
     </section>
 
 
-    <section class="py-20 bg-white font-['Poppins'] overflow-hidden" x-data="{ 
+    <section class="py-20 bg-white overflow-hidden" x-data="{ 
             skip: 1,
             next() {
                 this.$refs.container.scrollBy({ left: this.$refs.container.firstElementChild.offsetWidth + 40, behavior: 'smooth' })
@@ -720,7 +724,7 @@
 
             <div class="mb-16 flex justify-between items-end">
                 <div>
-                    <h2 class="text-3xl font-bold text-slate-900">Ils nous font confiance</h2>
+                    <h2 class="text-3xl font-medium text-slate-900">Ils nous font confiance</h2>
                     <p class="text-gray-500 mt-2">Ce que disent nos partenaires à travers l'Afrique.</p>
                 </div>
 
@@ -753,8 +757,8 @@
                                 class="w-full h-full object-contain rounded-2xl" alt="Moov Africa Logo">
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 leading-none mb-1">Gajo Élevage</h4>
-                            <p class="text-[10px] text-[#00A651] uppercase tracking-[0.15em] font-black">Cameroun</p>
+                            <h4 class="font-medium text-slate-900 leading-none mb-1">Gajo Élevage</h4>
+                            <p class="text-[10px] text-[#00A651] uppercase tracking-[0.15em] font-medium">Cameroun</p>
                         </div>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed italic">
@@ -779,8 +783,8 @@
                                 class="w-full h-full object-contain rounded-2xl" alt="Moov Africa Logo">
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 leading-none mb-1">Moov Africa</h4>
-                            <p class="text-[10px] text-[#00A651] uppercase tracking-[0.15em] font-black">Togo</p>
+                            <h4 class="font-medium text-slate-900 leading-none mb-1">Moov Africa</h4>
+                            <p class="text-[10px] text-[#00A651] uppercase tracking-[0.15em] font-medium">Togo</p>
                         </div>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed italic">
@@ -805,9 +809,9 @@
                                 class="w-full h-full object-contain rounded-2xl" alt="Moov Africa Logo">
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 leading-none mb-1">Supermarché Le Champion
+                            <h4 class="font-medium text-slate-900 leading-none mb-1">Supermarché Le Champion
                             </h4>
-                            <p class="text-[10px] text-[#00A651] uppercase tracking-[0.15em] font-black">Cameroun</p>
+                            <p class="text-[10px] text-[#00A651] uppercase tracking-[0.15em] font-medium">Cameroun</p>
                         </div>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed italic">
@@ -839,10 +843,10 @@
         }
     </style>
 
-    <section class="py-24 bg-white font-['Poppins']">
+    <section class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-6 text-center">
 
-            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-12">
+            <h2 class="text-4xl md:text-5xl font-medium text-slate-900 mb-12">
                 Vous avez une question ?
             </h2>
 
@@ -851,7 +855,7 @@
                 <div
                     class="group border border-gray-100 rounded-[2rem] p-6 hover:bg-gray-50 transition-all duration-300">
                     <details class="cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-lg text-slate-800 list-none">
+                        <summary class="flex justify-between items-center font-medium text-lg text-slate-800 list-none">
                             Comment devenir partenaire Gozem ?
                             <span
                                 class="w-8 h-8 flex items-center justify-center transition-transform duration-500 group-open:rotate-180">
@@ -868,7 +872,7 @@
                 <div
                     class="group border border-gray-100 rounded-[2rem] p-6 hover:bg-gray-50 transition-all duration-300">
                     <details class="cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-lg text-slate-800 list-none">
+                        <summary class="flex justify-between items-center font-medium text-lg text-slate-800 list-none">
                             Quels sont les documents nécessaires ?
                             <span
                                 class="w-8 h-8 flex items-center justify-center transition-transform duration-500 group-open:rotate-180">
@@ -885,7 +889,7 @@
                 <div
                     class="group border border-gray-100 rounded-[2rem] p-6 hover:bg-gray-50 transition-all duration-300">
                     <details class="cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-lg text-slate-800 list-none">
+                        <summary class="flex justify-between items-center font-medium text-lg text-slate-800 list-none">
                             Quand suis-je payé pour mes services ?
                             <span
                                 class="w-8 h-8 flex items-center justify-center transition-transform duration-500 group-open:rotate-180">
@@ -906,7 +910,7 @@
                     Notre Service Relation Client est à votre disposition via ce formulaire de contact.
                     Il se fera le plaisir de vous répondre assez rapidement.</p>
                 <a href="mailto:support@gozem.co"
-                    class="inline-block px-10 py-4 bg-white border border-gray-100 text-[#00A651] font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    class="inline-block px-10 py-4 bg-white border border-gray-100 text-[#00A651] font-medium rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     Écrivez-nous
                 </a>
             </div>
@@ -925,7 +929,7 @@
     <style>
         /* Style des boutons d'onglets */
         .tab-btn {
-            @apply flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-gray-500 bg-[#F1F3F5] transition-all whitespace-nowrap border-none;
+            @apply flex items-center gap-2 px-6 py-3 rounded-full font-medium text-gray-500 bg-[#F1F3F5] transition-all whitespace-nowrap border-none;
         }
 
         /* État Actif : Fond noir et texte blanc */
@@ -967,14 +971,14 @@
             // 2. Gérer le style des boutons
             document.querySelectorAll('.tab-btn').forEach(b => {
                 // On remet le style inactif (Transparent + Bordure grise)
-                b.className = "tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700";
+                b.className = "tab-btn flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-transparent border-gray-200 text-gray-500 hover:border-slate-400 hover:text-slate-700";
                 // On remet l'icône en mode sombre
                 const img = b.querySelector('img');
                 if (img) img.className = "w-5 h-5 object-contain opacity-70";
             });
 
             // 3. Appliquer le style actif au bouton cliqué (Noir + Bordure noire + Icône blanche)
-            btn.className = "tab-btn active flex items-center gap-3 px-6 py-3 rounded-full font-semibold border-2 transition-all duration-300 whitespace-nowrap bg-slate-900 border-slate-900 text-white shadow-lg scale-105";
+            btn.className = "tab-btn active flex items-center gap-3 px-6 py-3 rounded-full font-medium border-2 transition-all duration-300 whitespace-nowrap bg-slate-900 border-slate-900 text-white shadow-lg scale-105";
             const activeImg = btn.querySelector('img');
             if (activeImg) activeImg.className = "w-5 h-5 object-contain brightness-0 invert";
         }
